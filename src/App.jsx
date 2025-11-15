@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 /*import { useEffect } from "react";*/
 
 export default function App() {
-/*  const { VITE_API_HTTP, VITE_API_URL, VITE_API_PORT } = import.meta.env;
+  /*  const { VITE_API_HTTP, VITE_API_URL, VITE_API_PORT } = import.meta.env;
   const reponseServer = "réponse du serveur : port 3000 en écoute !";
   const request = () => {
     fetch(
@@ -21,29 +21,30 @@ export default function App() {
         console.log(response);
       });
   }, []);
-*/  
-console.log(window.location.href);
-return (
+*/
+  console.log(window.location.href);
+  return (
     <>
       <header>
-<Link to="/">	<img src="TMK.png" className="logo-tmk"/> </Link>
-	</header>
-	<ul className="liste-titre">
-<li className="liste-categorie"> <Link to="/route1">
-	azerty
-</Link> 
-	</li>
+        <Link to="/">
+          {" "}
+          <img src="TMK.png" className="logo-tmk" />{" "}
+        </Link>
+      </header>
+      <ul className="liste-titre">
+        <li className="liste-categorie">
+          {" "}
+          <Link to="/route1" className="link">
+            Qu'est ce que la GRC ?
+          </Link>
+        </li>
 
+        <Link to="/route2" className="link">
+          <li className="liste-categorie">lien 2 ...</li>
+        </Link>
+      </ul>
 
-<Link to="/route2">
-<li className="liste-categorie">
-azerty2
-</li>
-</Link>
-	</ul>
-
-        <Outlet />
-     
-     </>
+      <Outlet />
+    </>
   );
 }
