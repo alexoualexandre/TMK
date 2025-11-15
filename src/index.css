@@ -7,26 +7,24 @@
   padding: 0;
 }
 
-.link {
+/*.link {
   text-decoration: none;
   color: white;
 }
-
+*/
 header {
   width: 100%;
   height: 5em;
-  background-color: black;
+  background-color: white;
   text-align: center;
 }
 
-.ul-nav {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.liste-titre {
+  text-align: center;
+  position: absolute;
+  top: 7em;  
   width: 100%;
-  height: 2.5em;
-  background-color: grey;
+  list-style-type: disc;
 }
 
 .composant-1 {
@@ -39,4 +37,12 @@ header {
 
 .form {
   margin-top: 1em;
+}
+
+.logo-tmk {
+  width: 50%;
+}
+
+.liste-categorie {
+  margin-bottom: 2.5em;
 }

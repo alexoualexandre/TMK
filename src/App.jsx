@@ -1,9 +1,9 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-import { useEffect } from "react";
+/*import { useEffect } from "react";*/
 
 export default function App() {
-  const { VITE_API_HTTP, VITE_API_URL, VITE_API_PORT } = import.meta.env;
+/*  const { VITE_API_HTTP, VITE_API_URL, VITE_API_PORT } = import.meta.env;
   const reponseServer = "réponse du serveur : port 3000 en écoute !";
   const request = () => {
     fetch(
@@ -21,41 +21,29 @@ export default function App() {
         console.log(response);
       });
   }, []);
-  return (
+*/  
+console.log(window.location.href);
+return (
     <>
       <header>
-        <h1 style={{ color: "white" }}>header</h1>
+<Link to="/">	<img src="TMK.png" className="logo-tmk"/> </Link>
+	</header>
+	<ul className="liste-titre">
+<li className="liste-categorie"> <Link to="/route1">
+	azerty
+</Link> 
+	</li>
 
-        <nav>
-          <ul className="ul-nav">
-            <li>
-              <Link to="/" className="link">
-                Accueils22222222
-              </Link>
-            </li>
-            <li>
-              <Link to="/route1" className="link">
-                route1
-              </Link>
-            </li>
-            <li>
-              <Link to="/route2" className="link">
-                route2
-              </Link>
-            </li>
-            <li>
-              <Link to="/form" className="link">
-                formulaire
-              </Link>
-            </li>
-          </ul>
-        </nav>
+
+<Link to="/route2">
+<li className="liste-categorie">
+azerty2
+</li>
+</Link>
+	</ul>
 
         <Outlet />
-      </header>
-      <button type="button" onClick={request}>
-        request
-      </button>
-    </>
+     
+     </>
   );
 }
