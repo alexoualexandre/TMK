@@ -1,4 +1,4 @@
-:root {
+⁸:root {
   --txt: white;
 }
 
@@ -49,8 +49,16 @@ header {
 
 .section1 {
   width: 100%;
-  height: 90%;
+  height: 80%;
   position: absolute;
   top: 6.8em;
-  background-color: red;
+  overflow: scroll;
+  background-color: white;
+}
+
+.img {
+  width: 30%;
+  height: 7em;
+  margin-left: 2%;
+  border: 2px solid black;
 }
