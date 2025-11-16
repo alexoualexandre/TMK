@@ -43,13 +43,11 @@ export default function App() {
           <li className="liste-categorie">Méthode d'argumentation CABP</li>
         </Link>
 
-
-
-<Link to="/route3" className="link">
-          <li className="liste-categorie">La structure de l'appel entrant et assertivité</li>
+        <Link to="/route3" className="link">
+          <li className="liste-categorie">
+            La structure de l'appel entrant et assertivité
+          </li>
         </Link>
-
-
       </ul>
 
       <Outlet />
