@@ -51,6 +51,9 @@ export default function App() {
         <Link to="/route4" className="link">
           <li className="liste-categorie">Glossaire de la relation client</li>
         </Link>
+        <Link to="/route5" className="link">
+          <li className="liste-categorie">Word</li>
+        </Link>
       </ul>
 
       <Outlet />

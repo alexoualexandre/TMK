@@ -9,6 +9,7 @@ import Formulaire from "./Formulaire.jsx";
 import StructureAppelEntrant from "./StructureAppelEntrant.jsx";
 import Glossaire from "./Glossaire.jsx";
 import "./index.css";
+import Word from "./Word.jsx";
 
 // Définition du routeur
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/route4",
         element: <Glossaire />,
+      },
+      {
+        path: "/route5",
+        element: <Word />,
       },
     ],
   },
