@@ -7,6 +7,7 @@ import Composant2 from "./Composant2.jsx";
 import { Provider } from "./Context.jsx";
 import Formulaire from "./Formulaire.jsx";
 import StructureAppelEntrant from "./StructureAppelEntrant.jsx";
+import Glossaire from "./Glossaire.jsx";
 import "./index.css";
 
 // Définition du routeur
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/route3",
         element: <StructureAppelEntrant />,
+      },
+      {
+        path: "/route4",
+        element: <Glossaire />,
       },
     ],
   },

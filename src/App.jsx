@@ -48,6 +48,9 @@ export default function App() {
             La structure de l'appel entrant et assertivité
           </li>
         </Link>
+        <Link to="/route4" className="link">
+          <li className="liste-categorie">Glossaire de la relation client</li>
+        </Link>
       </ul>
 
       <Outlet />
