@@ -54,6 +54,14 @@ export default function App() {
         <Link to="/route5" className="link">
           <li className="liste-categorie">Word</li>
         </Link>
+        <Link to="/route6" className="link">
+          <li className="liste-categorie">
+            Vente additionnelle /Vente au rebond
+          </li>
+        </Link>
+        <Link to="/route7" className="link">
+          <li className="liste-categorie">Mathématique</li>
+        </Link>
       </ul>
 
       <Outlet />

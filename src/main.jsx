@@ -10,6 +10,8 @@ import StructureAppelEntrant from "./StructureAppelEntrant.jsx";
 import Glossaire from "./Glossaire.jsx";
 import "./index.css";
 import Word from "./Word.jsx";
+import Vavr from "./VaVr.jsx";
+import Math from "./Math.jsx";
 
 // Définition du routeur
 const router = createBrowserRouter([
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
       {
         path: "/route5",
         element: <Word />,
+      },
+      {
+        path: "/route6",
+        element: <Vavr />,
+      },
+      {
+        path: "/route7",
+        element: <Math />,
       },
     ],
   },

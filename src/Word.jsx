@@ -18,6 +18,9 @@ function Word() {
       <img src="word/11.jpg" className="img" />
       <img src="word/12.jpg" className="img" />
       <img src="word/13.jpg" className="img" />
+      <img src="word/14.jpg" className="img" />
+      <img src="word/15.jpg" className="img" />
+      <img src="word/16.jpg" className="img" />
     </section>
   );
 }
