@@ -64,8 +64,6 @@ header {
 }
 
 .button-off {
- /* width: 2em;
-  height: 2em;*/
   position: fixed;
   left: 47%;
   top: 10%;
@@ -73,7 +71,7 @@ header {
   font-size: 2em;
   background-color: white;
   color: red;
-  border: none; 
+  border: none;
 }
 
 .div-img {

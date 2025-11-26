@@ -62,6 +62,9 @@ export default function App() {
         <Link to="/route7" className="link">
           <li className="liste-categorie">Mathématique</li>
         </Link>
+        <Link to="/route8" className="link">
+          <li className="liste-categorie">Expression écrite</li>
+        </Link>
       </ul>
 
       <Outlet />

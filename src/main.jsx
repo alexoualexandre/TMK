@@ -12,6 +12,7 @@ import "./index.css";
 import Word from "./Word.jsx";
 import Vavr from "./VaVr.jsx";
 import Math from "./Math.jsx";
+import ExpressionEcrite from "./ExpressionEcrite.jsx";
 
 // Définition du routeur
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/route7",
         element: <Math />,
+      },
+      {
+        path: "/route8",
+        element: <ExpressionEcrite />,
       },
     ],
   },

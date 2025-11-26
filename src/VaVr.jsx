@@ -27,6 +27,17 @@ function Vavr() {
       <img src="VAVR/11.jpg" className="img" onClick={size} />
       <img src="VAVR/12.jpg" className="img" onClick={size} />
       <img src="VAVR/13.jpg" className="img" onClick={size} />
+      <img src="VAVR/14.jpg" className="img" onClick={size} />
+      <img src="VAVR/15.jpg" className="img" onClick={size} />
+      <img src="VAVR/16.jpg" className="img" onClick={size} />
+      <img src="VAVR/17.jpg" className="img" onClick={size} />
+      <img src="VAVR/18.jpg" className="img" onClick={size} />
+      <img src="VAVR/19.jpg" className="img" onClick={size} />
+      <img src="VAVR/20.jpg" className="img" onClick={size} />
+      <img src="VAVR/21.jpg" className="img" onClick={size} />
+      <img src="VAVR/22.jpg" className="img" onClick={size} />
+      <img src="VAVR/23.jpg" className="img" onClick={size} />
+      <img src="VAVR/24.jpg" className="img" onClick={size} />
       {div && (
         <div className="div-img">
           <button className="button-off" onClick={reduce}>
