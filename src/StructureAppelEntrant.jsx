@@ -21,6 +21,7 @@ function StructureAppelEntrant() {
       <img src="structureAppelEntrant/5.jpg" className="img" onClick={size} />
       <img src="structureAppelEntrant/6.jpg" className="img" onClick={size} />
       <img src="structureAppelEntrant/7.jpg" className="img" onClick={size} />
+      <img src="structureAppelEntrant/8.jpg" className="img" onClick={size} />
       {div && (
         <div className="div-img">
           <button className="button-off" onClick={reduce}>
