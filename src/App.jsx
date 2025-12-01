@@ -68,6 +68,9 @@ export default function App() {
         <Link to="/route9" className="link">
           <li className="liste-categorie">ACCR / techiniques de ventes</li>
         </Link>
+        <Link to="/route10" className="link">
+          <li className="liste-categorie">Ecrits professionnels 3/6</li>
+        </Link>
       </ul>
 
       <Outlet />

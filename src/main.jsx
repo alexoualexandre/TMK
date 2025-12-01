@@ -14,6 +14,7 @@ import Vavr from "./VaVr.jsx";
 import Math from "./Math.jsx";
 import ExpressionEcrite from "./ExpressionEcrite.jsx";
 import InitiationTechVente from "./InitiationTechVente.jsx";
+import Ecritpro3 from "./EcritPro3.jsx";
 
 // Définition du routeur
 const router = createBrowserRouter([
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/route9",
         element: <InitiationTechVente />,
+      },
+      {
+        path: "/route10",
+        element: <Ecritpro3 />,
       },
     ],
   },
