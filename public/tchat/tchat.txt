@@ -1,0 +1,112 @@
+tchat = canal de communication écrite, message court destiné a entré en communication avec l'entreprise.
+
+
+
+il se développe énormément, aujourd'hui il n'est que écrit.
+
+
+
+surtout des TCHAT BOT.
+
+
+
+les réponse ne sont pas forcément au top.
+
+
+
+si le tchat répond pas correctement ,le canal est transféré vers un conseiller.
+
+
+
+
+
+
+
+
+
+tchat COMMUNAUTAIRE = client ambassadeur de la marque qui répond au questions des clients.
+
+
+
+tchat REACTIF = uniquement conseiller = réponse a une demande du client , c'est le client qui interpelle la marque.
+
+
+
+tchat PROACTIF = uniquement conseiller = anticipe la demande , logiciel analyse comportement et cherche a interagir pour interpeler l'internaute (puis-je vous aider).
+
+
+
+tchat SYNCHROME = capacité de répondre en temps réel.
+
+
+
+tchat ASYNCHROME = prise en charge par un conseiller ultérieurement.
+
+
+
+
+
+
+
+avantage de proposer du tchat pour l'entreprise = cible les jeunes du fait des messages , optimisé la satisfaction clien tal fidélisation et accroitre le taux de tranfo ( transformé la volonté d'achat en achat ).
+
+
+
+avantage client = gains de temps, joiniabilité renforcer, communication facile a n'importe quel endroit, gratuité.
+
+
+
+mission du conseiller charger du tchat = répondre de façon efficace , pertinante au question des internautes, développer la vente, aussi les vente complémentaire,toujours atteindre satisfaction et fidélisation, assister en temps réel les clients, il faut être en capacité de faire une relation entre le client et la marque, remonter les information entre le client et la marque.
+
+
+
+compétance pour la tchat = vitesse de frappe, rédactionnel sans faute, bien connaitre produit service et site, s'occuper jusqu'a 5 tchat en même temps mais 3 en générale,
+
+écoute et comprendre la demande, identifier les signaux faibles (identifier élément pour bien repondre et voire faire des vente compléméntaire par rapport a son dicours).
+
+
+
+peu faire et pas faire : phrases courte (15 mots environ pas de bloc de paragraphe 2 ou 3 lignes max), ne pas faire de fautes, pas de d'abréviation sauf RDV SAV SVP, pas de fautes de frappes, personnalisé la réponse si possible, pas d'émoji sauf autorisation entreprise, langage courant et positif, bien ponctuer et pas de couleur, utiliser une biblioteque de phrase générique, insérer des liens, pas de langage sms, utiliser des verbe d'actions et fort
+
+
+
+
+
+
+
+
+
+
+
+structure d'un tchat : 1 prise de contact sans identification sauf si besoin d'aller dans le dossier , accueil .
+
+                      2 identifier l'objet (la demande) .
+
+                      3 questionnement (ouverte) l'orienter sur les element utile, poid , couleur, dimension ... se qu'on ne fait pas au tel.
+
+                      4 apporté une solution conscise en donnant des élémént sur le produit pour valoriser la solution avec lien hypertexte si nécéssaire.
+
+                      5 chercher la validation , qu'en penser vous ? et pas attendre le oui , tout de suite faire la proposition de vente complémentaire (en général on 			 fait soit VA oU VR ou les deux mais une c'est déja bien).
+
+                      6 prise de conger avec satisfaction client. (le client reste autonome , on le guide mais on enregistre aucune commande , on le guide c'est tout)
+
+
+
+
+
+
+
+
+
+
+
+
+
+je vous suggère cet iphone 15 pour une valeur de 600€ , ce produit correspond au critère que vous m'avez indiqué ,il posséde 128 giga de stocckage ,qu'en pensez vous ?
+
+
+
+
+
+
+

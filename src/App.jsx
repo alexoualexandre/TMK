@@ -45,7 +45,9 @@ export default function App() {
 
         <Link to="/route3" className="link">
           <li className="liste-categorie">
-            La structure de l'appel entrant et assertivité
+            La structure de l'appel
+            <br />
+            entrant et assertivité
           </li>
         </Link>
         <Link to="/route4" className="link">
@@ -56,7 +58,9 @@ export default function App() {
         </Link>
         <Link to="/route6" className="link">
           <li className="liste-categorie">
-            Vente additionnelle /Vente au rebond
+            Vente additionnelle/
+            <br />
+            Vente au rebond
           </li>
         </Link>
         <Link to="/route7" className="link">
@@ -70,6 +74,50 @@ export default function App() {
         </Link>
         <Link to="/route10" className="link">
           <li className="liste-categorie">Ecrits professionnels 3/6</li>
+        </Link>
+        <Link to="/route11" className="link">
+          <li className="liste-categorie">Modele de lettre</li>
+        </Link>
+        <Link to="/route12" className="link">
+          <li className="liste-categorie">Fourmules utiles en back office</li>
+        </Link>
+        <Link to="/route13" className="link">
+          <li className="liste-categorie">Phrases génériques</li>
+        </Link>
+        <Link to="/route14" className="link">
+          <li className="liste-categorie">Back office 1/3</li>
+        </Link>
+        <Link to="/route15" className="link">
+          <li className="liste-categorie">Back office 2/3</li>
+        </Link>
+        <Link to="/route16" className="link">
+          <li className="liste-categorie">
+            Gestions des
+            <br />
+            réclamations1/3
+          </li>
+        </Link>
+        <Link to="/route17" className="link">
+          <li className="liste-categorie">
+            technique de <br />
+            recouvrement 1/2
+          </li>
+        </Link>
+        <Link to="/route18" className="link">
+          <li className="liste-categorie">Ecrits professionnels 4/6</li>
+        </Link>
+        <Link to="/route19" className="link">
+          <li className="liste-categorie">
+            participe passé
+            <br />
+            verbes pronominaux
+          </li>
+        </Link>
+        <Link to="/route20" className="link">
+          <li className="liste-categorie">Subjonctif présent</li>
+        </Link>
+        <Link to="/route21" className="link">
+          <li className="liste-categorie">Les tchats</li>
         </Link>
       </ul>
 

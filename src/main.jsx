@@ -15,6 +15,17 @@ import Math from "./Math.jsx";
 import ExpressionEcrite from "./ExpressionEcrite.jsx";
 import InitiationTechVente from "./InitiationTechVente.jsx";
 import Ecritpro3 from "./EcritPro3.jsx";
+import ModeleLettre from "./ModelLettre.jsx";
+import FourmulesUtilesEnBackOffice from "./FourmulesUtilesEnBackOffice.jsx";
+import PhrasesGeneriques from "./PhrasesGeneriques.jsx";
+import Bo1 from "./Bo1.jsx";
+import Bo2 from "./Bo2.jsx";
+import GestionReclam from "./GestionReclam.jsx";
+import TechniquRecouvrement1 from "./TechniquRecouvrement1.jsx";
+import EcritPro4 from "./EcritPro4.jsx";
+import PartcipePasser from "./PartcipePasser.jsx";
+import SubjonctifPresent from "./SubjonctifPresent.jsx";
+import Tchat from "./Tchat.jsx";
 
 // Définition du routeur
 const router = createBrowserRouter([
@@ -65,6 +76,50 @@ const router = createBrowserRouter([
       {
         path: "/route10",
         element: <Ecritpro3 />,
+      },
+      {
+        path: "/route11",
+        element: <ModeleLettre />,
+      },
+      {
+        path: "/route12",
+        element: <FourmulesUtilesEnBackOffice />,
+      },
+      {
+        path: "/route13",
+        element: <PhrasesGeneriques />,
+      },
+      {
+        path: "/route14",
+        element: <Bo1 />,
+      },
+      {
+        path: "/route15",
+        element: <Bo2 />,
+      },
+      {
+        path: "/route16",
+        element: <GestionReclam />,
+      },
+      {
+        path: "/route17",
+        element: <TechniquRecouvrement1 />,
+      },
+      {
+        path: "/route18",
+        element: <EcritPro4 />,
+      },
+      {
+        path: "/route19",
+        element: <PartcipePasser />,
+      },
+      {
+        path: "/route20",
+        element: <SubjonctifPresent />,
+      },
+      {
+        path: "/route21",
+        element: <Tchat />,
       },
     ],
   },
