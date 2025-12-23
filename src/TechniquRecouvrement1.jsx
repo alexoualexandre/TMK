@@ -149,6 +149,76 @@ function TechniquRecouvrement1() {
         className="img"
         onClick={size}
       />
+      <img
+        src="technique de recouvrement 1sur 2/28.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/29.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/30.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/31.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/32.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/33.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/34.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/35.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/36.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/37.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/38.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/39.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/40.png"
+        className="img"
+        onClick={size}
+      />
+      <img
+        src="technique de recouvrement 1sur 2/41.png"
+        className="img"
+        onClick={size}
+      />
 
       {div && (
         <div className="div-img">
