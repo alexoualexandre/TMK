@@ -40,7 +40,11 @@ export default function App() {
         </li>
 
         <Link to="/route2" className="link">
-          <li className="liste-categorie">Méthode d'argumentation CABP</li>
+          <li className="liste-categorie">
+            Méthode d'argumentation
+            <br />
+            CABP
+          </li>
         </Link>
 
         <Link to="/route3" className="link">

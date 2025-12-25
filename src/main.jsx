@@ -26,6 +26,7 @@ import EcritPro4 from "./EcritPro4.jsx";
 import PartcipePasser from "./PartcipePasser.jsx";
 import SubjonctifPresent from "./SubjonctifPresent.jsx";
 import Tchat from "./Tchat.jsx";
+import Chevaux from "./Chevaux.jsx";
 
 // Définition du routeur
 const router = createBrowserRouter([
@@ -120,6 +121,10 @@ const router = createBrowserRouter([
       {
         path: "/route21",
         element: <Tchat />,
+      },
+      {
+        path: "/chevaux",
+        element: <Chevaux />,
       },
     ],
   },
