@@ -165,7 +165,7 @@ header {
   width: 40%;
   margin-left: 6.5%;
   margin-top: 20%;
-background-color: pink;
+  background-color: pink;
   border: 5px solid black;
   border-radius: 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -182,14 +182,12 @@ background-color: pink;
   background-color: pink;
   border: 5px solid black;
   border-radius: 20px;
-  
-  
 }
 
 .total {
-font-size: 3em;
-text-align: center;
-margin-top: 35%;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 35%;
 }
 
 .select {
@@ -201,12 +199,11 @@ margin-top: 35%;
 #select0 {
   position: fixed;
   top: 39%;
-  
 }
 
 #select1 {
   position: fixed;
-  top: 33%;
+  top: 33.5%;
   left: 1%;
 }
 
@@ -214,4 +211,130 @@ margin-top: 35%;
   position: fixed;
   top: 31%;
   left: 17%;
+}
+
+#select3 {
+  position: fixed;
+  top: 27.7%;
+  left: 26%;
+}
+
+#select4 {
+  position: fixed;
+  top: 30.8%;
+  left: 40%;
+}
+
+#select5 {
+  position: fixed;
+  top: 27.5%;
+  left: 46%;
+}
+
+#select6 {
+  position: fixed;
+  top: 25%;
+  left: 62%;
+}
+
+#select7 {
+  position: fixed;
+  top: 31.5%;
+  left: 83%;
+}
+
+#select8 {
+  position: fixed;
+  top: 39.5%;
+  left: 85%;
+}
+
+#select9 {
+  position: fixed;
+  top: 45%;
+  left: 83%;
+}
+
+#select10 {
+  position: fixed;
+  top: 48.5%;
+  left: 70%;
+}
+
+#select11 {
+  position: fixed;
+  top: 52%;
+  left: 69%;
+}
+
+#select12 {
+  position: fixed;
+  top: 55.3%;
+  left: 71%;
+}
+
+#select13 {
+  position: fixed;
+  top: 58.5%;
+  left: 82%;
+}
+
+#select14 {
+  position: fixed;
+  top: 62%;
+  left: 70%;
+}
+
+#select15 {
+  position: fixed;
+  top: 66.7%;
+  left: 70%;
+}
+
+#select16 {
+  position: fixed;
+  top: 71.5%;
+  left: 54%;
+}
+
+#select17 {
+  position: fixed;
+  top: 57.5%;
+  left: 36.2%;
+}
+
+#select18 {
+  position: fixed;
+  top: 62.2%;
+  left: 34%;
+}
+
+#select19 {
+  position: fixed;
+  top: 67.9%;
+  left: 5%;
+}
+
+#select20 {
+  position: fixed;
+  top: 64.6%;
+  left: 4%;
+}
+
+#select21 {
+  position: fixed;
+  top: 61.4%;
+  left: 3%;
+}
+
+#select22 {
+  position: fixed;
+  top: 58%;
+  left: 2%;
+}
+
+#select23 {
+  position: fixed;
+  top: 52%;
+  left: 1%;
 }
