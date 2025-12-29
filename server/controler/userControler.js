@@ -16,10 +16,20 @@ const addUser = async (req, res, next) => {
   const { us } = req.body;
   try {
     const userId = await new User().addUser(us);
-    res.json({number: userId});
+    res.json({ number: userId });
   } catch (err) {
     next({ error: `erreur:${err}` });
   }
 };
 
-module.exports = { getUser, addUser };
+const updateInvitation = async (req, res, next) => {
+  const { us, id } = req.body;
+  try {
+    const inviteId = await new User().updateInvitation(us, id);
+    res.json({invite: inviteId});
+  } catch (err) {
+    next({ error: `erreur:${err}` });
+  }
+};
+
+module.exports = { getUser, addUser, updateInvitation };

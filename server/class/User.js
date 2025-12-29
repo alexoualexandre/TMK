@@ -18,6 +18,14 @@ class User {
     );
     return user.insertId;
   }
+
+  async updateInvitation(us, id) {
+    await connection.query(
+      "UPDATE users SET joueur2 = ? WHERE id = ?",
+      [us, id]
+    );
+    return id;
+  }
 }
 
 module.exports = { User };
