@@ -52,29 +52,29 @@ function Puissance() {
   //     bdd();
   //   }, []);
 
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: "Mon super contenu",
-          text: "Regarde ça !",
-          url: `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/puissance4?name=`,
-        });
-        console.log("Partage réussi");
-      } catch (err) {
-        console.log("Partage annulé", err);
-      }
-    } else {
-      alert("Le partage n'est pas supporté sur cet appareil");
-    }
-  };
+  // const handleShare = async () => {
+  //   if (navigator.share) {
+  //     try {
+  //       await navigator.share({
+  //         title: "Mon super contenu",
+  //         text: "Regarde ça !",
+  //         url: `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/puissance4?name=`,
+  //       });
+  //       console.log("Partage réussi");
+  //     } catch (err) {
+  //       console.log("Partage annulé", err);
+  //     }
+  //   } else {
+  //     alert("Le partage n'est pas supporté sur cet appareil");
+  //   }
+  // };
 
   return (
     <div className="div-puissance">
       <img src="P4.png" className="img-puissance4" />
-      <button className="partage" onClick={handleShare}>
-        inviter
-      </button>
+      <a href="sms:+33659834511?body=Bonjour%20!">
+        <button className="partage">inviter</button>
+      </a>
       {/* <div className="lesnoms"><h4>{users && users[0].nom1}</h4><h4>{users && users[0].nom2}</h4></div> */}
 
       <div className="parent">
