@@ -35,7 +35,7 @@ function Puissance() {
               .then((response) => response.json())
               .then((res) => {
                 setInviter(res.number);
-                localStorage.setItem("session", inviter);
+                localStorage.setItem("session", res.number);
                 console.log(localStorage.getItem("session"));
               });
           }
