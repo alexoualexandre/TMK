@@ -72,7 +72,7 @@ function Puissance() {
   return (
     <div className="div-puissance">
       <img src="P4.png" className="img-puissance4" />
-      <a href="sms:+33659834511?body=Bonjour%20!">
+      <a href="sms:0659834511?body=Bonjour%20!">
         <button className="partage">inviter</button>
       </a>
       {/* <div className="lesnoms"><h4>{users && users[0].nom1}</h4><h4>{users && users[0].nom2}</h4></div> */}
