@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Puissance() {
+  const [inviter, setInviter] = useState("");
   const { VITE_API_URL, VITE_API_SERVER_PORT, VITE_API_HTTP } = import.meta.env;
 
   useEffect(() => {
@@ -29,7 +30,7 @@ function Puissance() {
           )
             .then((response) => response.json())
             .then((res) => {
-              console.log(res.number);
+              setInviter(res.number);
             });
         }
       });
@@ -72,7 +73,12 @@ function Puissance() {
   return (
     <div className="div-puissance">
       <img src="P4.png" className="img-puissance4" />
-      <a href="sms:0659834511?body=Bonjour%20!">
+      <a
+        href={
+          inviter !== "" &&
+          `sms:0671431750?body=Envoyez lui ce lien et jouer ensemble à puissance 4 !`
+        }
+      >
         <button className="partage">inviter</button>
       </a>
       {/* <div className="lesnoms"><h4>{users && users[0].nom1}</h4><h4>{users && users[0].nom2}</h4></div> */}
