@@ -76,7 +76,7 @@ function Puissance() {
       <a
         href={
           inviter !== "" &&
-          `sms:0671431750?body=Envoyez lui ce lien et jouer ensemble à puissance 4 !`
+          `sms:0659834511?body=Envoyez lui ce lien et jouer ensemble à puissance 4 ! ${VITE_API_HTTP}://${VITE_API_URL}:5003/puissance4?id=${inviter}`
         }
       >
         <button className="partage">inviter</button>
