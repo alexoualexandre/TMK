@@ -1,5 +1,15 @@
-⁸:root {
+@import url("https://fonts.googleapis.com/css2?family=Ribeye&display=swap");
+
+:root {
   --txt: white;
+  --red: #ff0000;
+  --yellow: #fff000;
+}
+
+.ribeye-regular {
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 * {
@@ -337,4 +347,65 @@ header {
   position: fixed;
   top: 52%;
   left: 1%;
+}
+
+.div-puissance {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  height: 45%;
+  background-color: #0025e1;
+  position: fixed;
+  top: 30%;
+  /* border-bottom: 40px double white; */
+}
+
+.case {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+
+.cercle {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  left: 10%;
+  top: 10%;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.img-puissance4 {
+  width: 50%;
+  position: fixed;
+  top: 0;
+  left: 25%;
+}
+
+.lesnoms {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5em;
+  position: fixed;
+  top: 12%;
+  font-family: "Ribeye", serif;
 }

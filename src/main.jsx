@@ -27,6 +27,7 @@ import PartcipePasser from "./PartcipePasser.jsx";
 import SubjonctifPresent from "./SubjonctifPresent.jsx";
 import Tchat from "./Tchat.jsx";
 import Chevaux from "./Chevaux.jsx";
+import Puissance from "./Puissance.jsx";
 
 // Définition du routeur
 const router = createBrowserRouter([
@@ -125,6 +126,10 @@ const router = createBrowserRouter([
       {
         path: "/chevaux",
         element: <Chevaux />,
+      },
+      {
+        path: "/puissance4",
+        element: <Puissance />,
       },
     ],
   },

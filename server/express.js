@@ -8,7 +8,7 @@ const cors = require("cors");
 
 const app = express();
 
-const { getUser } = require("./controler/userControler.js");
+const { getUser, addUser } = require("./controler/userControler.js");
 
 app.use(express.json());
 
@@ -34,4 +34,6 @@ app.get("/teste/:reponseServer", (req, res) => {
   res.json({ reponse: reponseServer });
 });
 
-app.get("/get-user", getUser);
+app.get("/get-user/:name", getUser);
+
+app.post("/add-user", addUser);
