@@ -109,35 +109,37 @@ function Puissance() {
   return (
     <div className="div-puissance">
       <img src="P4.png" className="img-puissance4" />
-
-      {!/^(06|07)[0-9]{8}$/.test(valueInput) ? (
-        <button className="partage" onClick={input} ref={buttonAdd}>
-          Jouer avec un ami
-        </button>
-      ) : (
-        <a
-          href={
-            inviter !== "" &&
-            `sms:${valueInput}?body=Envoyez lui ce lien et jouer ensemble à puissance 4 ! ${VITE_API_HTTP}://${VITE_API_URL}:5003/puissance4?id=${inviter}`
-          }
-        >
-          <button className="partage" ref={buttonAdd}>
-            Je l'invite !
+      {!params.get("id") &&
+        (!/^(06|07)[0-9]{8}$/.test(valueInput) ? (
+          <button className="partage" onClick={input} ref={buttonAdd}>
+            Jouer avec un ami
           </button>
-        </a>
-      )}
+        ) : (
+          <a
+            href={
+              inviter !== "" &&
+              `sms:${valueInput}?body=Envoyez lui ce lien et jouer ensemble à puissance 4 ! ${VITE_API_HTTP}://${VITE_API_URL}:5003/puissance4?id=${inviter}`
+            }
+          >
+            <button className="partage" ref={buttonAdd}>
+              Je l'invite !
+            </button>
+          </a>
+        ))}
+      {!params.get("id") &&
+        insertNumber &&
+        !/^(06|07)[0-9]{8}$/.test(valueInput) && (
+          <input
+            type="text"
+            className="insert-number"
+            autoFocus
+            onFocus={focusOn}
+            onBlur={focusOff}
+            onChange={change}
+            placeholder="Son numéro de mobile ..."
+          />
+        )}
 
-      {insertNumber && !/^(06|07)[0-9]{8}$/.test(valueInput) && (
-        <input
-          type="text"
-          className="insert-number"
-          autoFocus
-          onFocus={focusOn}
-          onBlur={focusOff}
-          onChange={change}
-          placeholder="Son numéro de mobile ..."
-        />
-      )}
       {/* <div className="lesnoms"><h4>{users && users[0].nom1}</h4><h4>{users && users[0].nom2}</h4></div> */}
 
       <div className="parent">
