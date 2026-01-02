@@ -28,9 +28,10 @@ class User {
   }
 
   async getData(id) {
-    const getData = await connection.query("SELECT * FROM users WHERE id = ?", [
-      id,
-    ]);
+    const [getData] = await connection.query(
+      "SELECT * FROM users WHERE id = ?",
+      [id]
+    );
     return getData;
   }
 }
