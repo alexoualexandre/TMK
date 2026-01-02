@@ -150,8 +150,8 @@ function Puissance() {
         )}
 
       <div className="lesnoms">
-        <h4>{openUsers && data[0].joueur1}</h4>{" "}
-        <h4>{openUsers && data[0].joueur2}</h4>
+        <h4>{openUsers || (data.length > 1 && data[0].joueur1)}</h4>{" "}
+        <h4>{openUsers || (data.length > 1 && data[0].joueur2)}</h4>
       </div>
       {/* <div className="lesnoms"><h4>salope</h4></div> */}
 
