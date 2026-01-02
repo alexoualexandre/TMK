@@ -93,7 +93,7 @@ function Puissance() {
 
   useEffect(() => {
     function bdd() {
-      if (localStorage.getItem("session")) {
+      
         const interval = setInterval(() => {
           fetch(
             `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/get-data/${localStorage.getItem("session")}`
@@ -104,7 +104,7 @@ function Puissance() {
             });
         }, 2000);
         return () => clearInterval(interval);
-      }
+      
     }
     bdd();
   }, []);
