@@ -20,11 +20,18 @@ class User {
   }
 
   async updateInvitation(us, id) {
-    await connection.query(
-      "UPDATE users SET joueur2 = ? WHERE id = ?",
-      [us, id]
-    );
+    await connection.query("UPDATE users SET joueur2 = ? WHERE id = ?", [
+      us,
+      id,
+    ]);
     return id;
+  }
+
+  async getData(id) {
+    const getData = await connection.query("SELECT * FROM users WHERE id = ?", [
+      id,
+    ]);
+    return getData;
   }
 }
 

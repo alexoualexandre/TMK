@@ -8,6 +8,8 @@ function Puissance() {
   const [inviter, setInviter] = useState("");
   const [insertNumber, setInsertNumber] = useState(false);
   const [valueInput, setValueInput] = useState("");
+  const [data, setData] = useState(false);
+  const [openUsers, setOpenUsers] = useState(false);
   const { VITE_API_URL, VITE_API_SERVER_PORT, VITE_API_HTTP } = import.meta.env;
 
   useEffect(() => {
@@ -89,26 +91,33 @@ function Puissance() {
     buttonAdd.current.style.opacity = 1;
   }
 
-  //   useEffect(() => {
-  //     function bdd() {
-  //       const interval = setInterval(() => {
-  //         fetch(
-  //           `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/get-user`
-  //         )
-  //           .then((response) => response.json())
-  //           .then((resp) => {
-  //             setUsers(resp);
-  //           });
-  //       }, 2000);
-  //       return () => clearInterval(interval);
-  //     }
+  useEffect(() => {
+    function bdd() {
+      if (localStorage.getItem("session")) {
+        const interval = setInterval(() => {
+          fetch(
+            `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/get-data/${localStorage.getItem("session")}`
+          )
+            .then((response) => response.json())
+            .then((resp) => {
+              setData(resp);
+            });
+        }, 2000);
+        return () => clearInterval(interval);
+      }
+    }
+    bdd();
+  }, []);
 
-  //     bdd();
-  //   }, []);
-
+  const demarre = () => {
+    setOpenUsers(true);
+    buttonAdd.current.style.display = "none";
+  };
+  console.log(data);
   return (
     <div className="div-puissance">
       <img src="P4.png" className="img-puissance4" />
+
       {!params.get("id") &&
         (!/^(06|07)[0-9]{8}$/.test(valueInput) ? (
           <button className="partage" onClick={input} ref={buttonAdd}>
@@ -121,11 +130,13 @@ function Puissance() {
               `sms:${valueInput}?body=Envoyez lui ce lien et jouer ensemble à puissance 4 ! ${VITE_API_HTTP}://${VITE_API_URL}:5003/puissance4?id=${inviter}`
             }
           >
-            <button className="partage" ref={buttonAdd}>
+            {}
+            <button className="partage" ref={buttonAdd} onClick={demarre}>
               Je l'invite !
             </button>
           </a>
         ))}
+
       {!params.get("id") &&
         insertNumber &&
         !/^(06|07)[0-9]{8}$/.test(valueInput) && (
@@ -140,7 +151,11 @@ function Puissance() {
           />
         )}
 
-      {/* <div className="lesnoms"><h4>{users && users[0].nom1}</h4><h4>{users && users[0].nom2}</h4></div> */}
+      <div className="lesnoms">
+        <h4>{openUsers && data[0][0].joueur1}</h4>{" "}
+        <h4>{openUsers && data[0][0].joueur2}</h4>
+      </div>
+      {/* <div className="lesnoms"><h4>salope</h4></div> */}
 
       <div className="parent">
         <div className="case">
