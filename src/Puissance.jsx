@@ -9,7 +9,7 @@ function Puissance() {
   const [insertNumber, setInsertNumber] = useState(false);
   const [valueInput, setValueInput] = useState("");
   const [data, setData] = useState(false);
-  const [openUsers, setOpenUsers] = useState(false);
+  // const [openUsers, setOpenUsers] = useState(false);
   const { VITE_API_URL, VITE_API_SERVER_PORT, VITE_API_HTTP } = import.meta.env;
 
   useEffect(() => {
@@ -108,7 +108,7 @@ function Puissance() {
   }, []);
 
   const demarre = () => {
-    setOpenUsers(true);
+    // setOpenUsers(true);
     buttonAdd.current.style.display = "none";
   };
   console.log(data);
@@ -150,8 +150,7 @@ function Puissance() {
         )}
 
       <div className="lesnoms">
-        <h4>{openUsers || (data.length > 1 && data[0].joueur1)}</h4>{" "}
-        <h4>{openUsers || (data.length > 1 && data[0].joueur2)}</h4>
+        <h4>{data && data[0].joueur1}</h4> <h4>{data && data[0].joueur2}</h4>
       </div>
       {/* <div className="lesnoms"><h4>salope</h4></div> */}
 
