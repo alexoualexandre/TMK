@@ -370,8 +370,7 @@ header {
   height: 45%;
   background-color: #0025e1;
   position: fixed;
-  top: 30%;
-  /* border-bottom: 40px double white; */
+  top: 40%;
 }
 
 .case {
@@ -413,7 +412,7 @@ header {
 .partage {
   position: fixed;
   width: 80%;
-  top: 15%;
+  top: 20%;
   left: 10%;
   font-size: 1.5em;
   border-radius: 20px;
@@ -430,7 +429,7 @@ header {
 .insert-number {
   position: fixed;
   width: 80%;
-  top: 15%;
+  top: 20%;
   left: 7%;
   font-size: 1.5em;
   border-radius: 20px;
@@ -443,4 +442,38 @@ header {
   border-bottom: 5px solid #eeeeee;
   border-left: 2px solid #eeeeee;
   background-color: transparent;
+}
+
+.h4-les-noms {
+  width: 50%;
+  text-align: center;
+}
+
+.span-les-noms {
+  color: #efbf04;
+}
+
+.barre {
+  width: 100%;
+  height: 0.3em;
+  background-color: black;
+  position: fixed;
+  top: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.puce {
+  width: 2em;
+  height: 600%;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  top: -250%;
+  border: 1px solid black;
+}
+
+input[type="radio"] {
+  accent-color: red;
 }

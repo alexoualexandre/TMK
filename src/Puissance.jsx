@@ -9,7 +9,6 @@ function Puissance() {
   const [insertNumber, setInsertNumber] = useState(false);
   const [valueInput, setValueInput] = useState("");
   const [data, setData] = useState(false);
-  // const [openUsers, setOpenUsers] = useState(false);
   const { VITE_API_URL, VITE_API_SERVER_PORT, VITE_API_HTTP } = import.meta.env;
 
   useEffect(() => {
@@ -108,10 +107,13 @@ function Puissance() {
   }, []);
 
   const demarre = () => {
-    // setOpenUsers(true);
     buttonAdd.current.style.display = "none";
   };
-  console.log(data);
+
+  const changeInput = () => {
+    // alert();
+  };
+
   return (
     <div className="div-puissance">
       <img src="P4.png" className="img-puissance4" />
@@ -150,10 +152,81 @@ function Puissance() {
         )}
 
       <div className="lesnoms">
-        <h4>{data && data[0].joueur1}</h4> <h4>{data && data[0].joueur2}</h4>
+        <h4 className="h4-les-noms">
+          {data && data[0].joueur1}
+          <br />
+          <span className="span-les-noms">
+            {data && data[0].joueur1 ? "0" : ""}
+          </span>
+        </h4>{" "}
+        <h4 className="h4-les-noms">
+          {data && data[0].joueur2}
+          <br />
+          <span className="span-les-noms">
+            {data && data[0].joueur2 ? "0" : ""}
+          </span>
+        </h4>
       </div>
-      {/* <div className="lesnoms"><h4>salope</h4></div> */}
-
+      {data && data[0].joueur2 && (
+        <div className="barre">
+          <input
+            type="radio"
+            className="puce"
+            name="radio"
+            onChange={changeInput}
+            defaultChecked={data && data[0].radio_position === "radio1"}
+            value="radio1"
+          />
+          <input
+            type="radio"
+            className="puce"
+            name="radio"
+            onChange={changeInput}
+            defaultChecked={data && data[0].radio_position === "radio2"}
+            value="radio2"
+          />
+          <input
+            type="radio"
+            className="puce"
+            name="radio"
+            onChange={changeInput}
+            defaultChecked={data && data[0].radio_position === "radio3"}
+            value="radio3"
+          />
+          <input
+            type="radio"
+            className="puce"
+            name="radio"
+            onChange={changeInput}
+            defaultChecked={data && data[0].radio_position === "radio4"}
+            value="radio4"
+          />
+          <input
+            type="radio"
+            className="puce"
+            name="radio"
+            onChange={changeInput}
+            defaultChecked={data && data[0].radio_position === "radio5"}
+            value="radio5"
+          />
+          <input
+            type="radio"
+            className="puce"
+            name="radio"
+            onChange={changeInput}
+            defaultChecked={data && data[0].radio_position === "radio6"}
+            value="radio6"
+          />
+          <input
+            type="radio"
+            className="puce"
+            name="radio"
+            onChange={changeInput}
+            defaultChecked={data && data[0].radio_position === "radio7"}
+            value="radio7"
+          />
+        </div>
+      )}
       <div className="parent">
         <div className="case">
           <div className="cercle"></div>
