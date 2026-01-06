@@ -34,6 +34,13 @@ class User {
     );
     return getData;
   }
+
+  async updatePosition(inpt, id) {
+    await connection.query("UPDATE users SET radio_position = ? WHERE id = ?", [
+      inpt,
+      id,
+    ]);
+  }
 }
 
 module.exports = { User };

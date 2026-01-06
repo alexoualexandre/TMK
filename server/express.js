@@ -13,6 +13,7 @@ const {
   addUser,
   updateInvitation,
   getData,
+  updatePosition,
 } = require("./controler/userControler.js");
 
 app.use(express.json());
@@ -46,3 +47,5 @@ app.post("/add-user", addUser);
 app.put("/update-invitation", updateInvitation);
 
 app.get("/get-data/:id", getData);
+
+app.put("/update-position", updatePosition);

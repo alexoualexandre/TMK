@@ -42,4 +42,20 @@ const getData = async (req, res, next) => {
   }
 };
 
-module.exports = { getUser, addUser, updateInvitation, getData };
+const updatePosition = async (req, res, next) => {
+  const { inpt, id } = req.body;
+  try {
+    await new User().updatePosition(inpt, id);
+    res.json({ update: "ok" });
+  } catch (err) {
+    next({ error: `erreur:${err}` });
+  }
+};
+
+module.exports = {
+  getUser,
+  addUser,
+  updateInvitation,
+  getData,
+  updatePosition,
+};

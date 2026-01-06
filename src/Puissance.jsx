@@ -110,8 +110,21 @@ function Puissance() {
     buttonAdd.current.style.display = "none";
   };
 
-  const changeInput = () => {
-    // alert();
+  const changeInput = (e) => {
+    fetch(
+      `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/update-position`,
+
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          inpt: e.target.value,
+          id: localStorage.getItem("session"),
+        }),
+      }
+    ).then((response) => response.json());
   };
 
   return (
@@ -174,7 +187,7 @@ function Puissance() {
             className="puce"
             name="radio"
             onChange={changeInput}
-            defaultChecked={data && data[0].radio_position === "radio1"}
+            checked={data && data[0].radio_position === "radio1"}
             value="radio1"
           />
           <input
@@ -182,7 +195,7 @@ function Puissance() {
             className="puce"
             name="radio"
             onChange={changeInput}
-            defaultChecked={data && data[0].radio_position === "radio2"}
+            checked={data && data[0].radio_position === "radio2"}
             value="radio2"
           />
           <input
@@ -190,7 +203,7 @@ function Puissance() {
             className="puce"
             name="radio"
             onChange={changeInput}
-            defaultChecked={data && data[0].radio_position === "radio3"}
+            checked={data && data[0].radio_position === "radio3"}
             value="radio3"
           />
           <input
@@ -198,7 +211,7 @@ function Puissance() {
             className="puce"
             name="radio"
             onChange={changeInput}
-            defaultChecked={data && data[0].radio_position === "radio4"}
+            checked={data && data[0].radio_position === "radio4"}
             value="radio4"
           />
           <input
@@ -206,7 +219,7 @@ function Puissance() {
             className="puce"
             name="radio"
             onChange={changeInput}
-            defaultChecked={data && data[0].radio_position === "radio5"}
+            checked={data && data[0].radio_position === "radio5"}
             value="radio5"
           />
           <input
@@ -214,7 +227,7 @@ function Puissance() {
             className="puce"
             name="radio"
             onChange={changeInput}
-            defaultChecked={data && data[0].radio_position === "radio6"}
+            checked={data && data[0].radio_position === "radio6"}
             value="radio6"
           />
           <input
@@ -222,7 +235,7 @@ function Puissance() {
             className="puce"
             name="radio"
             onChange={changeInput}
-            defaultChecked={data && data[0].radio_position === "radio7"}
+            checked={data && data[0].radio_position === "radio7"}
             value="radio7"
           />
         </div>
