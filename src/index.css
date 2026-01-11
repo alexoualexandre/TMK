@@ -477,3 +477,15 @@ header {
 input[type="radio"] {
   accent-color: red;
 }
+
+.pion {
+  position: absolute;
+  width: 3.3em;
+  height: 3.3em;
+  left: 44%;
+  top: 20%;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 1;
+  border: 1px solid white;
+}

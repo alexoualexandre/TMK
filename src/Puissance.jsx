@@ -4,6 +4,7 @@ function Puissance() {
   const params = new URLSearchParams(window.location.search);
   const paramsId = params.get("id");
   const buttonAdd = useRef();
+  const divPuissance = useRef();
 
   const [inviter, setInviter] = useState("");
   const [insertNumber, setInsertNumber] = useState(false);
@@ -127,8 +128,39 @@ function Puissance() {
     ).then((response) => response.json());
   };
 
+  if (data && data[0].joueur2) {
+    for (let i = 1; i < 43; i++) {
+      let pion = document.createElement("div");
+      pion.className = "pion";
+
+      if (i === 3) {
+        pion.style.left = "50%";
+        pion.style.zIndex = 2;
+        pion.id = "p3";
+      }
+
+      if (i === 2) {
+        pion.style.left = "55%";
+        pion.style.zIndex = 3;
+        pion.id = "p2";
+      }
+
+      if (i === 1) {
+        pion.style.left = "60%";
+        pion.style.zIndex = 4;
+        pion.id = "p1";
+      }
+
+      if (i % 2 === 0) {
+        pion.style.backgroundColor = "yellow";
+      }
+
+      divPuissance.current.appendChild(pion);
+    }
+  }
+
   return (
-    <div className="div-puissance">
+    <div className="div-puissance" ref={divPuissance}>
       <img src="P4.png" className="img-puissance4" />
 
       {!params.get("id") &&
@@ -181,64 +213,66 @@ function Puissance() {
         </h4>
       </div>
       {data && data[0].joueur2 && (
-        <div className="barre">
-          <input
-            type="radio"
-            className="puce"
-            name="radio"
-            onChange={changeInput}
-            checked={data && data[0].radio_position === "radio1"}
-            value="radio1"
-          />
-          <input
-            type="radio"
-            className="puce"
-            name="radio"
-            onChange={changeInput}
-            checked={data && data[0].radio_position === "radio2"}
-            value="radio2"
-          />
-          <input
-            type="radio"
-            className="puce"
-            name="radio"
-            onChange={changeInput}
-            checked={data && data[0].radio_position === "radio3"}
-            value="radio3"
-          />
-          <input
-            type="radio"
-            className="puce"
-            name="radio"
-            onChange={changeInput}
-            checked={data && data[0].radio_position === "radio4"}
-            value="radio4"
-          />
-          <input
-            type="radio"
-            className="puce"
-            name="radio"
-            onChange={changeInput}
-            checked={data && data[0].radio_position === "radio5"}
-            value="radio5"
-          />
-          <input
-            type="radio"
-            className="puce"
-            name="radio"
-            onChange={changeInput}
-            checked={data && data[0].radio_position === "radio6"}
-            value="radio6"
-          />
-          <input
-            type="radio"
-            className="puce"
-            name="radio"
-            onChange={changeInput}
-            checked={data && data[0].radio_position === "radio7"}
-            value="radio7"
-          />
-        </div>
+        <>
+          <div className="barre">
+            <input
+              type="radio"
+              className="puce"
+              name="radio"
+              onChange={changeInput}
+              checked={data && data[0].radio_position === "radio1"}
+              value="radio1"
+            />
+            <input
+              type="radio"
+              className="puce"
+              name="radio"
+              onChange={changeInput}
+              checked={data && data[0].radio_position === "radio2"}
+              value="radio2"
+            />
+            <input
+              type="radio"
+              className="puce"
+              name="radio"
+              onChange={changeInput}
+              checked={data && data[0].radio_position === "radio3"}
+              value="radio3"
+            />
+            <input
+              type="radio"
+              className="puce"
+              name="radio"
+              onChange={changeInput}
+              checked={data && data[0].radio_position === "radio4"}
+              value="radio4"
+            />
+            <input
+              type="radio"
+              className="puce"
+              name="radio"
+              onChange={changeInput}
+              checked={data && data[0].radio_position === "radio5"}
+              value="radio5"
+            />
+            <input
+              type="radio"
+              className="puce"
+              name="radio"
+              onChange={changeInput}
+              checked={data && data[0].radio_position === "radio6"}
+              value="radio6"
+            />
+            <input
+              type="radio"
+              className="puce"
+              name="radio"
+              onChange={changeInput}
+              checked={data && data[0].radio_position === "radio7"}
+              value="radio7"
+            />
+          </div>
+        </>
       )}
       <div className="parent">
         <div className="case">
