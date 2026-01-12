@@ -133,26 +133,34 @@ function Puissance() {
       let pion = document.createElement("div");
       pion.className = "pion";
 
+   if (i === 4) {
+       /* pion.style.left = "40%";*/
+        pion.style.zIndex = 40;
+        pion.id = "p4";
+      }
+
+
+
       if (i === 3) {
-        pion.style.left = "50%";
-        pion.style.zIndex = 2;
+       /* pion.style.left = "50%";*/
+        pion.style.zIndex = 41;
         pion.id = "p3";
       }
 
       if (i === 2) {
-        pion.style.left = "55%";
-        pion.style.zIndex = 3;
+       /* pion.style.left = "55%";*/
+        pion.style.zIndex = 42;
         pion.id = "p2";
       }
 
       if (i === 1) {
-        pion.style.left = "60%";
-        pion.style.zIndex = 4;
+        pion.style.left = "70%";  
+        pion.style.zIndex = 43;
         pion.id = "p1";
       }
 
       if (i % 2 === 0) {
-        pion.style.backgroundColor = "yellow";
+        pion.style.backgroundColor = "pink";
       }
 
       divPuissance.current.appendChild(pion);
