@@ -480,12 +480,12 @@ input[type="radio"] {
 
 .pion {
   position: absolute;
-  width: 3.3em;
-  height: 3.3em;
+  width: 3.1em;
+  height: 3.1em;
   left: 44%;
   top: 20%;
   border-radius: 50%;
-  background-color: black;
+  background-color: pink;
   z-index: 1;
   border: 1px solid white;
 }

@@ -41,6 +41,7 @@ function Puissance() {
               .then((res) => {
                 setInviter(res.number);
                 localStorage.setItem("session", res.number);
+                localStorage.setItem("next", 1);
                 console.log(localStorage.getItem("session"));
               });
           }
@@ -62,7 +63,7 @@ function Puissance() {
             .then((response) => response.json())
             .then((res) => {
               localStorage.setItem("session", res.invite);
-              console.log(localStorage.getItem("session"));
+              localStorage.setItem("next", 2);
             });
         }
       });
@@ -112,6 +113,7 @@ function Puissance() {
   };
 
   const changeInput = (e) => {
+    const v = e.target.value;
     fetch(
       `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/update-position`,
 
@@ -121,51 +123,55 @@ function Puissance() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          inpt: e.target.value,
+          inpt: v,
           id: localStorage.getItem("session"),
+          nex: !paramsId ? 1 : 2,
+          p: "",
         }),
       }
     ).then((response) => response.json());
   };
-
-  if (data && data[0].joueur2) {
-    for (let i = 1; i < 43; i++) {
-      let pion = document.createElement("div");
-      pion.className = "pion";
-
-   if (i === 4) {
-       /* pion.style.left = "40%";*/
-        pion.style.zIndex = 40;
-        pion.id = "p4";
+  useEffect(() => {
+    if (data && data[0].joueur2) {
+      for (let i = 1; i < 2; i++) {
+        let pion = document.createElement("div");
+        pion.className = "pion";
+        if (parseInt(data[0].next, 10) === 2) {
+          pion.style.backgroundColor = "black";
+        }
+        divPuissance.current.appendChild(pion);
       }
-
-
-
-      if (i === 3) {
-       /* pion.style.left = "50%";*/
-        pion.style.zIndex = 41;
-        pion.id = "p3";
-      }
-
-      if (i === 2) {
-       /* pion.style.left = "55%";*/
-        pion.style.zIndex = 42;
-        pion.id = "p2";
-      }
-
-      if (i === 1) {
-        pion.style.left = "70%";  
-        pion.style.zIndex = 43;
-        pion.id = "p1";
-      }
-
-      if (i % 2 === 0) {
-        pion.style.backgroundColor = "pink";
-      }
-
-      divPuissance.current.appendChild(pion);
     }
-  }
+  }, [data]);
+
+  // if (i === 4) {
+  //   pion.style.left = "40%";
+  //   pion.style.zIndex = 40;
+  //   pion.id = "p4";
+  // }
+
+  // if (i === 3) {
+  //   pion.style.left = "50%";
+  //   pion.style.zIndex = 41;
+  //   pion.id = "p3";
+  // }
+
+  // if (i === 2) {
+  //   pion.style.left = "55%";
+  //   pion.style.zIndex = 42;
+  //   pion.id = "p2";
+  // }
+
+  // if (i === 1) {
+  //   pion.style.left = "1.5%";
+  //   pion.style.top = "78%"
+  //   pion.style.zIndex = 43;
+  //   pion.id = "p1";
+  // }
+
+  // if (i % 2 === 0) {
+  //   pion.style.backgroundColor = "black";
+  // }
 
   return (
     <div className="div-puissance" ref={divPuissance}>
@@ -230,6 +236,11 @@ function Puissance() {
               onChange={changeInput}
               checked={data && data[0].radio_position === "radio1"}
               value="radio1"
+              disabled={
+                data &&
+                parseInt(data[0].next, 10) ===
+                  parseInt(localStorage.getItem("next"), 10)
+              }
             />
             <input
               type="radio"
@@ -238,6 +249,11 @@ function Puissance() {
               onChange={changeInput}
               checked={data && data[0].radio_position === "radio2"}
               value="radio2"
+              disabled={
+                data &&
+                parseInt(data[0].next, 10) ===
+                  parseInt(localStorage.getItem("next"), 10)
+              }
             />
             <input
               type="radio"
@@ -246,6 +262,11 @@ function Puissance() {
               onChange={changeInput}
               checked={data && data[0].radio_position === "radio3"}
               value="radio3"
+              disabled={
+                data &&
+                parseInt(data[0].next, 10) ===
+                  parseInt(localStorage.getItem("next"), 10)
+              }
             />
             <input
               type="radio"
@@ -254,6 +275,11 @@ function Puissance() {
               onChange={changeInput}
               checked={data && data[0].radio_position === "radio4"}
               value="radio4"
+              disabled={
+                data &&
+                parseInt(data[0].next, 10) ===
+                  parseInt(localStorage.getItem("next"), 10)
+              }
             />
             <input
               type="radio"
@@ -262,6 +288,11 @@ function Puissance() {
               onChange={changeInput}
               checked={data && data[0].radio_position === "radio5"}
               value="radio5"
+              disabled={
+                data &&
+                parseInt(data[0].next, 10) ===
+                  parseInt(localStorage.getItem("next"), 10)
+              }
             />
             <input
               type="radio"
@@ -270,6 +301,11 @@ function Puissance() {
               onChange={changeInput}
               checked={data && data[0].radio_position === "radio6"}
               value="radio6"
+              disabled={
+                data &&
+                parseInt(data[0].next, 10) ===
+                  parseInt(localStorage.getItem("next"), 10)
+              }
             />
             <input
               type="radio"
@@ -278,6 +314,11 @@ function Puissance() {
               onChange={changeInput}
               checked={data && data[0].radio_position === "radio7"}
               value="radio7"
+              disabled={
+                data &&
+                parseInt(data[0].next, 10) ===
+                  parseInt(localStorage.getItem("next"), 10)
+              }
             />
           </div>
         </>
