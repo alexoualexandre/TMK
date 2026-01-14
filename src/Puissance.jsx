@@ -126,7 +126,7 @@ function Puissance() {
           inpt: v,
           id: localStorage.getItem("session"),
           nex: !paramsId ? 1 : 2,
-          p: "",
+          p: v === "radio1" ? "r/36" : "",
         }),
       }
     ).then((response) => response.json());
