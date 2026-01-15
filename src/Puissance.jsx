@@ -10,6 +10,7 @@ function Puissance() {
   const [insertNumber, setInsertNumber] = useState(false);
   const [valueInput, setValueInput] = useState("");
   const [data, setData] = useState(false);
+
   const { VITE_API_URL, VITE_API_SERVER_PORT, VITE_API_HTTP } = import.meta.env;
 
   useEffect(() => {
@@ -114,6 +115,7 @@ function Puissance() {
 
   const changeInput = (e) => {
     const v = e.target.value;
+    const sql = `UPDATE users SET p${parseInt(data[0].compteur, 10)} = ? WHERE id = ?`;
     fetch(
       `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/update-position`,
 
@@ -126,7 +128,9 @@ function Puissance() {
           inpt: v,
           id: localStorage.getItem("session"),
           nex: !paramsId ? 1 : 2,
-          p: v === "radio1" ? "r/36" : "",
+          compteur: data && parseInt(data[0].compteur, 10) + 1,
+          request: sql,
+          p: "salut",
         }),
       }
     ).then((response) => response.json());
@@ -143,35 +147,6 @@ function Puissance() {
       }
     }
   }, [data]);
-
-  // if (i === 4) {
-  //   pion.style.left = "40%";
-  //   pion.style.zIndex = 40;
-  //   pion.id = "p4";
-  // }
-
-  // if (i === 3) {
-  //   pion.style.left = "50%";
-  //   pion.style.zIndex = 41;
-  //   pion.id = "p3";
-  // }
-
-  // if (i === 2) {
-  //   pion.style.left = "55%";
-  //   pion.style.zIndex = 42;
-  //   pion.id = "p2";
-  // }
-
-  // if (i === 1) {
-  //   pion.style.left = "1.5%";
-  //   pion.style.top = "78%"
-  //   pion.style.zIndex = 43;
-  //   pion.id = "p1";
-  // }
-
-  // if (i % 2 === 0) {
-  //   pion.style.backgroundColor = "black";
-  // }
 
   return (
     <div className="div-puissance" ref={divPuissance}>
@@ -234,7 +209,7 @@ function Puissance() {
               className="puce"
               name="radio"
               onChange={changeInput}
-              checked={data && data[0].radio_position === "radio1"}
+              checked={false}
               value="radio1"
               disabled={
                 data &&
@@ -247,7 +222,7 @@ function Puissance() {
               className="puce"
               name="radio"
               onChange={changeInput}
-              checked={data && data[0].radio_position === "radio2"}
+              checked={false}
               value="radio2"
               disabled={
                 data &&
@@ -260,7 +235,7 @@ function Puissance() {
               className="puce"
               name="radio"
               onChange={changeInput}
-              checked={data && data[0].radio_position === "radio3"}
+              checked={false}
               value="radio3"
               disabled={
                 data &&
@@ -273,7 +248,7 @@ function Puissance() {
               className="puce"
               name="radio"
               onChange={changeInput}
-              checked={data && data[0].radio_position === "radio4"}
+              checked={false}
               value="radio4"
               disabled={
                 data &&
@@ -286,7 +261,7 @@ function Puissance() {
               className="puce"
               name="radio"
               onChange={changeInput}
-              checked={data && data[0].radio_position === "radio5"}
+              checked={false}
               value="radio5"
               disabled={
                 data &&
@@ -299,7 +274,7 @@ function Puissance() {
               className="puce"
               name="radio"
               onChange={changeInput}
-              checked={data && data[0].radio_position === "radio6"}
+              checked={false}
               value="radio6"
               disabled={
                 data &&
@@ -312,7 +287,7 @@ function Puissance() {
               className="puce"
               name="radio"
               onChange={changeInput}
-              checked={data && data[0].radio_position === "radio7"}
+              checked={false}
               value="radio7"
               disabled={
                 data &&

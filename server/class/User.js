@@ -35,13 +35,17 @@ class User {
     return getData;
   }
 
-  async updatePosition(inpt, id, nex, p) {
+  async updatePosition(inpt, id, nex, p, compteur, request) {
     await connection.query("UPDATE users SET radio_position = ? WHERE id = ?", [
       inpt,
       id,
     ]);
+    await connection.query("UPDATE users SET compteur = ? WHERE id = ?", [
+      compteur,
+      id,
+    ]);
     await connection.query("UPDATE users SET next = ? WHERE id = ?", [nex, id]);
-    await connection.query("UPDATE users SET p1 = ? WHERE id = ?", [p, id]);
+    await connection.query(request, [p, id]);
   }
 }
 
