@@ -130,7 +130,51 @@ function Puissance() {
           nex: !paramsId ? 1 : 2,
           compteur: data && parseInt(data[0].compteur, 10) + 1,
           request: sql,
-          p: "salut",
+          p: (()=>{
+
+if(paramsId){
+if(v === "radio1" && data[0].p1 === ""){
+return "r/36";
+}
+
+if(v === "radio1" && data[0].p1 !== ""){
+return "r29";
+}
+
+if(v === "radio1" && data[0].p2 === ""){
+return "r/29";
+}
+
+if(v === "radio1" && data[0].p2 !== ""){
+return "r22";
+}
+
+}else{
+if(v === "radio1" && data[0].p1 === ""){
+return "n/36";
+}
+
+if(v === "radio1" && data[0].p1 !== ""){
+return "n/29";
+}
+
+if(v === "radio1" && data[0].p2 === ""){
+return "r/29";
+}
+
+if(v === "radio1" && data[0].p2 !== ""){
+return "r22";
+}
+
+
+}
+
+
+
+
+
+
+})(),
         }),
       }
     ).then((response) => response.json());
