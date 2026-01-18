@@ -43,7 +43,6 @@ function Puissance() {
                 setInviter(res.number);
                 localStorage.setItem("session", res.number);
                 localStorage.setItem("next", 1);
-                console.log(localStorage.getItem("session"));
               });
           }
         } else {
@@ -115,7 +114,11 @@ function Puissance() {
 
   const changeInput = (e) => {
     const v = e.target.value;
-    const sql = `UPDATE users SET p${parseInt(data[0].compteur, 10)} = ? WHERE id = ?`;
+    let numP = 0;
+    if (v === "radio1" && data[0].p36 === "") {
+      numP = 36;
+    }
+    const sql = `UPDATE users SET p${numP} = ? WHERE id = ?`;
     fetch(
       `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/update-position`,
 
@@ -129,52 +132,8 @@ function Puissance() {
           id: localStorage.getItem("session"),
           nex: !paramsId ? 1 : 2,
           compteur: data && parseInt(data[0].compteur, 10) + 1,
+          p: data[0].next === 1 ? "r" : "n",
           request: sql,
-          p: (()=>{
-
-if(paramsId){
-if(v === "radio1" && data[0].p1 === ""){
-return "r/36";
-}
-
-if(v === "radio1" && data[0].p1 !== ""){
-return "r29";
-}
-
-if(v === "radio1" && data[0].p2 === ""){
-return "r/29";
-}
-
-if(v === "radio1" && data[0].p2 !== ""){
-return "r22";
-}
-
-}else{
-if(v === "radio1" && data[0].p1 === ""){
-return "n/36";
-}
-
-if(v === "radio1" && data[0].p1 !== ""){
-return "n/29";
-}
-
-if(v === "radio1" && data[0].p2 === ""){
-return "r/29";
-}
-
-if(v === "radio1" && data[0].p2 !== ""){
-return "r22";
-}
-
-
-}
-
-
-
-
-
-
-})(),
         }),
       }
     ).then((response) => response.json());

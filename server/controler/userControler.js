@@ -43,9 +43,9 @@ const getData = async (req, res, next) => {
 };
 
 const updatePosition = async (req, res, next) => {
-  const { inpt, id, nex, p, compteur, request } = req.body;
+  const { inpt, id, nex, compteur, p, request } = req.body;
   try {
-    await new User().updatePosition(inpt, id, nex, p, compteur, request);
+    await new User().updatePosition(inpt, id, nex, compteur, p, request);
     res.json({ update: "ok" });
   } catch (err) {
     next({ error: `erreur:${err}` });

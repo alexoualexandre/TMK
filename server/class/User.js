@@ -35,7 +35,7 @@ class User {
     return getData;
   }
 
-  async updatePosition(inpt, id, nex, p, compteur, request) {
+  async updatePosition(inpt, id, nex, compteur, p, request) {
     await connection.query("UPDATE users SET radio_position = ? WHERE id = ?", [
       inpt,
       id,
