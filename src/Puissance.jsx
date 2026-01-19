@@ -16,7 +16,7 @@ function Puissance() {
   useEffect(() => {
     let name = prompt("Votre prénom ou un pseudo");
     fetch(
-      `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/get-user/${name}`
+      `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/get-user/${name}`,
     )
       .then((response) => response.json())
       .then((resp) => {
@@ -36,7 +36,7 @@ function Puissance() {
                 body: JSON.stringify({
                   us: name,
                 }),
-              }
+              },
             )
               .then((response) => response.json())
               .then((res) => {
@@ -58,7 +58,7 @@ function Puissance() {
                 us: name,
                 id: paramsId,
               }),
-            }
+            },
           )
             .then((response) => response.json())
             .then((res) => {
@@ -96,13 +96,13 @@ function Puissance() {
     function bdd() {
       const interval = setInterval(() => {
         fetch(
-          `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/get-data/${localStorage.getItem("session")}`
+          `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/get-data/${localStorage.getItem("session")}`,
         )
           .then((response) => response.json())
           .then((resp) => {
             setData(resp);
           });
-      }, 800);
+      }, 500);
       return () => clearInterval(interval);
     }
     bdd();
@@ -116,33 +116,173 @@ function Puissance() {
     const v = e.target.value;
     let numP;
 
-    if(v === "radio1" && data[0].p36 === ""){
+    if (v === "radio1" && data[0].p36 === "") {
       numP = 36;
-    }else{
-if(v === "radio1" && data[0].p29 === ""){
-numP = 29;
-}else{
-if(v === "radio1" && data[0].p22 === ""){
-numP = 22;
-}else{
-if(v === "radio1" && data[0].p15 === ""){
-numP = 15;
-}else{
-if(v === "radio1" && data[0].p8 ===""){
-numP = 8;
-}else{
-if(v === "radio1" && data[0].p1 === ""){
-numP = 1;
-}
-}
+    } else {
+      if (v === "radio1" && data[0].p29 === "") {
+        numP = 29;
+      } else {
+        if (v === "radio1" && data[0].p22 === "") {
+          numP = 22;
+        } else {
+          if (v === "radio1" && data[0].p15 === "") {
+            numP = 15;
+          } else {
+            if (v === "radio1" && data[0].p8 === "") {
+              numP = 8;
+            } else {
+              if (v === "radio1" && data[0].p1 === "") {
+                numP = 1;
+              }
+            }
+          }
+        }
+      }
+    }
 
-}
+    if (v === "radio2" && data[0].p37 === "") {
+      numP = 37;
+    } else {
+      if (v === "radio2" && data[0].p30 === "") {
+        numP = 30;
+      } else {
+        if (v === "radio2" && data[0].p23 === "") {
+          numP = 23;
+        } else {
+          if (v === "radio2" && data[0].p16 === "") {
+            numP = 16;
+          } else {
+            if (v === "radio2" && data[0].p9 === "") {
+              numP = 9;
+            } else {
+              if (v === "radio2" && data[0].p2 === "") {
+                numP = 2;
+              }
+            }
+          }
+        }
+      }
+    }
 
-}
-}
-}
+    if (v === "radio3" && data[0].p38 === "") {
+      numP = 38;
+    } else {
+      if (v === "radio3" && data[0].p31 === "") {
+        numP = 31;
+      } else {
+        if (v === "radio3" && data[0].p24 === "") {
+          numP = 24;
+        } else {
+          if (v === "radio3" && data[0].p17 === "") {
+            numP = 17;
+          } else {
+            if (v === "radio3" && data[0].p10 === "") {
+              numP = 10;
+            } else {
+              if (v === "radio3" && data[0].p3 === "") {
+                numP = 3;
+              }
+            }
+          }
+        }
+      }
+    }
 
+    if (v === "radio4" && data[0].p39 === "") {
+      numP = 39;
+    } else {
+      if (v === "radio4" && data[0].p32 === "") {
+        numP = 32;
+      } else {
+        if (v === "radio4" && data[0].p25 === "") {
+          numP = 25;
+        } else {
+          if (v === "radio4" && data[0].p18 === "") {
+            numP = 18;
+          } else {
+            if (v === "radio4" && data[0].p11 === "") {
+              numP = 11;
+            } else {
+              if (v === "radio4" && data[0].p4 === "") {
+                numP = 4;
+              }
+            }
+          }
+        }
+      }
+    }
 
+    if (v === "radio5" && data[0].p40 === "") {
+      numP = 40;
+    } else {
+      if (v === "radio5" && data[0].p33 === "") {
+        numP = 33;
+      } else {
+        if (v === "radio5" && data[0].p26 === "") {
+          numP = 26;
+        } else {
+          if (v === "radio5" && data[0].p19 === "") {
+            numP = 19;
+          } else {
+            if (v === "radio5" && data[0].p12 === "") {
+              numP = 12;
+            } else {
+              if (v === "radio5" && data[0].p5 === "") {
+                numP = 5;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    if (v === "radio6" && data[0].p41 === "") {
+      numP = 41;
+    } else {
+      if (v === "radio6" && data[0].p34 === "") {
+        numP = 34;
+      } else {
+        if (v === "radio6" && data[0].p27 === "") {
+          numP = 27;
+        } else {
+          if (v === "radio6" && data[0].p20 === "") {
+            numP = 20;
+          } else {
+            if (v === "radio6" && data[0].p13 === "") {
+              numP = 13;
+            } else {
+              if (v === "radio6" && data[0].p6 === "") {
+                numP = 6;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    if (v === "radio7" && data[0].p42 === "") {
+      numP = 42;
+    } else {
+      if (v === "radio7" && data[0].p35 === "") {
+        numP = 35;
+      } else {
+        if (v === "radio7" && data[0].p28 === "") {
+          numP = 28;
+        } else {
+          if (v === "radio7" && data[0].p21 === "") {
+            numP = 21;
+          } else {
+            if (v === "radio7" && data[0].p14 === "") {
+              numP = 14;
+            } else {
+              if (v === "radio7" && data[0].p7 === "") {
+                numP = 7;
+              }
+            }
+          }
+        }
+      }
+    }
 
     const sql = `UPDATE users SET p${numP} = ? WHERE id = ?`;
     fetch(
@@ -161,7 +301,7 @@ numP = 1;
           p: data[0].next === 1 ? "r" : "n",
           request: sql,
         }),
-      }
+      },
     ).then((response) => response.json());
   };
   useEffect(() => {
@@ -241,9 +381,10 @@ numP = 1;
               checked={false}
               value="radio1"
               disabled={
-                data &&
-                parseInt(data[0].next, 10) ===
-                  parseInt(localStorage.getItem("next"), 10)
+                (data &&
+                  parseInt(data[0].next, 10) ===
+                    parseInt(localStorage.getItem("next"), 10)) ||
+                (data && data[0].p1 !== "")
               }
             />
             <input
@@ -254,9 +395,10 @@ numP = 1;
               checked={false}
               value="radio2"
               disabled={
-                data &&
-                parseInt(data[0].next, 10) ===
-                  parseInt(localStorage.getItem("next"), 10)
+                (data &&
+                  parseInt(data[0].next, 10) ===
+                    parseInt(localStorage.getItem("next"), 10)) ||
+                (data && data[0].p2 !== "")
               }
             />
             <input
@@ -267,9 +409,10 @@ numP = 1;
               checked={false}
               value="radio3"
               disabled={
-                data &&
-                parseInt(data[0].next, 10) ===
-                  parseInt(localStorage.getItem("next"), 10)
+                (data &&
+                  parseInt(data[0].next, 10) ===
+                    parseInt(localStorage.getItem("next"), 10)) ||
+                (data && data[0].p3 !== "")
               }
             />
             <input
@@ -280,9 +423,10 @@ numP = 1;
               checked={false}
               value="radio4"
               disabled={
-                data &&
-                parseInt(data[0].next, 10) ===
-                  parseInt(localStorage.getItem("next"), 10)
+                (data &&
+                  parseInt(data[0].next, 10) ===
+                    parseInt(localStorage.getItem("next"), 10)) ||
+                (data && data[0].p4 !== "")
               }
             />
             <input
@@ -293,9 +437,10 @@ numP = 1;
               checked={false}
               value="radio5"
               disabled={
-                data &&
-                parseInt(data[0].next, 10) ===
-                  parseInt(localStorage.getItem("next"), 10)
+                (data &&
+                  parseInt(data[0].next, 10) ===
+                    parseInt(localStorage.getItem("next"), 10)) ||
+                (data && data[0].p5 !== "")
               }
             />
             <input
@@ -306,9 +451,10 @@ numP = 1;
               checked={false}
               value="radio6"
               disabled={
-                data &&
-                parseInt(data[0].next, 10) ===
-                  parseInt(localStorage.getItem("next"), 10)
+                (data &&
+                  parseInt(data[0].next, 10) ===
+                    parseInt(localStorage.getItem("next"), 10)) ||
+                (data && data[0].p6 !== "")
               }
             />
             <input
@@ -319,9 +465,10 @@ numP = 1;
               checked={false}
               value="radio7"
               disabled={
-                data &&
-                parseInt(data[0].next, 10) ===
-                  parseInt(localStorage.getItem("next"), 10)
+                (data &&
+                  parseInt(data[0].next, 10) ===
+                    parseInt(localStorage.getItem("next"), 10)) ||
+                (data && data[0].p7 !== "")
               }
             />
           </div>
@@ -329,130 +476,508 @@ numP = 1;
       )}
       <div className="parent">
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p1 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p1 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p2 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p2 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p3 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p3 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p4 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p4 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p5 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p5 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p6 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p6 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p7 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p7 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p8 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p8 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p9 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p9 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p10 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p10 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p11 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p11 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p12 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p12 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p13 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p13 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p14 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p14 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p15 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p15 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p16 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p16 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p17 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p17 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p18 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p18 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p19 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p19 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p20 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p20 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p21 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p21 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p22 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p22 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p23 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p23 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p24 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p24 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p25 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p25 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p26 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p26 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p27 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p27 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p28 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p28 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p29 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p29 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p30 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p30 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p31 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p31 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p32 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p32 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p33 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p33 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p34 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p34 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p35 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p35 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p36 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p36 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p37 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p37 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p38 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p38 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p39 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p39 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p40 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p40 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p41 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p41 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
         <div className="case">
-          <div className="cercle"></div>
+          <div
+            className="cercle"
+            style={
+              data && data[0].p42 === "r"
+                ? { backgroundColor: "pink" }
+                : data && data[0].p42 === "n"
+                  ? { backgroundColor: "black" }
+                  : { backgroundColor: "white" }
+            }
+          ></div>
         </div>
       </div>
     </div>
