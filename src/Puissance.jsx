@@ -114,10 +114,36 @@ function Puissance() {
 
   const changeInput = (e) => {
     const v = e.target.value;
-    let numP = 0;
-    if (v === "radio1" && data[0].p36 === "") {
+    let numP;
+
+    if(v === "radio1" && data[0].p36 === ""){
       numP = 36;
-    }
+    }else{
+if(v === "radio1" && data[0].p29 === ""){
+numP = 29;
+}else{
+if(v === "radio1" && data[0].p22 === ""){
+numP = 22;
+}else{
+if(v === "radio1" && data[0].p15 === ""){
+numP = 15;
+}else{
+if(v === "radio1" && data[0].p8 ===""){
+numP = 8;
+}else{
+if(v === "radio1" && data[0].p1 === ""){
+numP = 1;
+}
+}
+
+}
+
+}
+}
+}
+
+
+
     const sql = `UPDATE users SET p${numP} = ? WHERE id = ?`;
     fetch(
       `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/update-position`,
