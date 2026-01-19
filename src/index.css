@@ -356,7 +356,7 @@ header {
   left: 0;
   top: 0;
   /* background-color: white; */
-  background-image: url("s-l1200.jpg");
+  background-image: url("/public/s-l1200.jpg");
   background-repeat: no-repeat;
   z-index: 4;
   overflow: hidden;
