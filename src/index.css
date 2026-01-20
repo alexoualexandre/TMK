@@ -494,7 +494,7 @@ input[type="radio"] {
   left: 44%;
   top: 25%;
   border-radius: 50%;
-  background-color: pink;
+  background-color: #E91E63;
   z-index: 1;
   border: 2px double white;
 }

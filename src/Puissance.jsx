@@ -317,6 +317,30 @@ function Puissance() {
     }
   }, [data]);
 
+
+
+
+
+
+if(data && data[0].p36 === "r" &&
+data[0].p29 === "r" && data[0].p22 === 
+"r" && data[0].p15 === "r"
+){
+setTimeout(()=>{
+alert(`${data[0].joueur2} a gagné !`)
+},2000)
+}
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className="div-puissance" ref={divPuissance}>
       <img src="P4.png" className="img-puissance4" />
@@ -480,7 +504,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p1 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p1 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -492,7 +516,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p2 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p2 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -504,7 +528,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p3 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p3 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -516,7 +540,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p4 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p4 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -528,7 +552,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p5 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p5 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -540,7 +564,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p6 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p6 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -552,7 +576,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p7 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p7 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -564,7 +588,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p8 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p8 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -576,7 +600,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p9 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p9 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -588,7 +612,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p10 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p10 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -600,7 +624,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p11 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p11 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -612,7 +636,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p12 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p12 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -624,7 +648,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p13 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p13 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -636,7 +660,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p14 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p14 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -648,7 +672,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p15 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p15 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -660,7 +684,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p16 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p16 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -672,7 +696,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p17 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p17 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -684,7 +708,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p18 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p18 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -696,7 +720,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p19 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p19 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -708,7 +732,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p20 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p20 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -720,7 +744,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p21 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p21 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -732,7 +756,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p22 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p22 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -744,7 +768,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p23 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p23 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -756,7 +780,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p24 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p24 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -768,7 +792,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p25 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p25 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -780,7 +804,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p26 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p26 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -792,7 +816,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p27 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p27 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -804,7 +828,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p28 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p28 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -816,7 +840,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p29 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p29 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -828,7 +852,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p30 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p30 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -840,7 +864,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p31 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p31 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -852,7 +876,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p32 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p32 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -864,7 +888,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p33 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p33 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -876,7 +900,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p34 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p34 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -888,7 +912,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p35 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p35 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -900,7 +924,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p36 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p36 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -912,7 +936,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p37 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p37 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -924,7 +948,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p38 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p38 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -936,7 +960,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p39 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p39 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -948,7 +972,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p40 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p40 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -960,7 +984,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p41 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p41 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
@@ -972,7 +996,7 @@ function Puissance() {
             className="cercle"
             style={
               data && data[0].p42 === "r"
-                ? { backgroundColor: "pink" }
+                ? { backgroundColor: "#E91E63" }
                 : data && data[0].p42 === "n"
                   ? { backgroundColor: "black" }
                   : { backgroundColor: "white" }
