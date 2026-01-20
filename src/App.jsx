@@ -25,7 +25,7 @@ export default function App() {
   console.log(window.location.href);
   return (
     <>
-      <header>
+      {/* <header>
         <Link to="/">
           {" "}
           <img src="TMK.png" className="logo-tmk" />{" "}
@@ -123,7 +123,7 @@ export default function App() {
         <Link to="/route21" className="link">
           <li className="liste-categorie">Les tchats</li>
         </Link>
-      </ul>
+      </ul> */}
 
       <Outlet />
     </>

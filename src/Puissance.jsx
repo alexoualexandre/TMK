@@ -10,6 +10,7 @@ function Puissance() {
   const [insertNumber, setInsertNumber] = useState(false);
   const [valueInput, setValueInput] = useState("");
   const [data, setData] = useState(false);
+  const [winner, setWinner] = useState(false);
 
   const { VITE_API_URL, VITE_API_SERVER_PORT, VITE_API_HTTP } = import.meta.env;
 
@@ -317,29 +318,35 @@ function Puissance() {
     }
   }, [data]);
 
+  function additionR(n1, n2, n3, n4) {
+    if (
+      data &&
+      data[0]["p" + n1] === "r" &&
+      data[0]["p" + n2] === "r" &&
+      data[0]["p" + n3] === "r" &&
+      data[0]["p" + n4] === "r"
+    ) {
+      setTimeout(() => {
+        setWinner("r");
+      }, 1100);
+    }
+  }
 
+  // ligne 1 en bas pion 1 a gauche //
+  additionR(36, 29, 22, 15);
+  additionR(36, 30, 24, 18);
+  additionR(36, 37, 38, 39);
+  //////////////////////////////////////
 
+  // ligne 1 en bas pion 2 a gauche //
+  additionR(37, 30, 23, 16);
+  additionR(37, 31, 25, 19);
+  additionR(37, 38, 39, 40);
+  //////////////////////////////////////
 
-
-
-if(data && data[0].p36 === "r" &&
-data[0].p29 === "r" && data[0].p22 === 
-"r" && data[0].p15 === "r"
-){
-setTimeout(()=>{
-alert(`${data[0].joueur2} a gagné !`)
-},2000)
-}
-
-
-
-
-
-
-
-
-
-
+  if (winner && winner === "r") {
+    alert(`${data[0].joueur2} a gagné !`);
+  }
 
   return (
     <div className="div-puissance" ref={divPuissance}>
