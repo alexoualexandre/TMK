@@ -344,32 +344,23 @@ function Puissance() {
   additionR(37, 38, 39, 40);
   //////////////////////////////////////
 
-
-
-    // ligne 1 en bas pion 3 a gauche //
+  // ligne 1 en bas pion 3 a gauche //
   additionR(38, 39, 40, 41);
-  additionR(38, 31, 24, 17);                         
+  additionR(38, 31, 24, 17);
   additionR(38, 32, 26, 20);
   //////////////////////////////////////
 
-
-
-
-
-   // ligne 1 en bas pion central //
+  // ligne 1 en bas pion central //
   additionR(39, 31, 23, 15);
   additionR(39, 32, 25, 18);
   additionR(39, 33, 27, 21);
   //////////////////////////////////////
-
 
   // ligne 1 en bas pion 3 à droite //
   additionR(40, 33, 26, 19);
   additionR(40, 39, 38, 37);
   additionR(40, 32, 24, 16);
   //////////////////////////////////////
-  
-
 
   // ligne 1 en bas pion 2 à droite //
   additionR(41, 34, 27, 20);
@@ -377,18 +368,13 @@ function Puissance() {
   additionR(41, 33, 25, 17);
   //////////////////////////////////////
 
-
-
   // ligne 1 en bas pion 42 à droite //
   additionR(42, 35, 28, 21);
   additionR(42, 41, 40, 39);
   additionR(42, 34, 26, 18);
   //////////////////////////////////////
 
-
-
-
-if (winner && winner === "r") {
+  if (winner && winner === "r") {
     alert(`${data[0].joueur2} a gagné !`);
   }
 
