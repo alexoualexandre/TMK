@@ -374,170 +374,276 @@ function Puissance() {
   additionR(42, 34, 26, 18);
   //////////////////////////////////////
 
-
-
-
-
-
-
-
-
-
-
-
- // ligne 2 en bas pion 1 a gauche //
+  // ligne 2 en bas pion 1 a gauche //
   additionR(29, 22, 15, 8);
   additionR(29, 23, 17, 11);
   additionR(29, 30, 31, 32);
   //////////////////////////////////////
-  
 
-
-
-
- // ligne 2 en bas pion 2 a gauche //
+  // ligne 2 en bas pion 2 a gauche //
   additionR(30, 23, 16, 9);
   additionR(30, 31, 32, 33);
   additionR(30, 24, 18, 12);
   //////////////////////////////////////
 
-
-
- // ligne 2 en bas pion 3 a gauche //
+  // ligne 2 en bas pion 3 a gauche //
   additionR(31, 24, 17, 10);
   additionR(31, 32, 33, 34);
   additionR(31, 25, 19, 13);
   //////////////////////////////////////
 
-
-
-
-
-
-// ligne 2 en bas pion central //
+  // ligne 2 en bas pion central //
   additionR(32, 25, 18, 11);
   additionR(32, 24, 16, 8);
-  additionR(31, 26, 20, 14);
+  additionR(32, 26, 20, 14);
   //////////////////////////////////////
 
-
-
-
-
-
-// ligne 2 en bas pion 3 a droite //
+  // ligne 2 en bas pion 3 a droite //
   additionR(33, 26, 19, 12);
   additionR(33, 32, 31, 30);
   additionR(33, 25, 17, 9);
   //////////////////////////////////////
 
-
-
-// ligne 2 en bas pion 2 a droite //
+  // ligne 2 en bas pion 2 a droite //
   additionR(34, 27, 20, 13);
   additionR(34, 33, 32, 31);
   additionR(34, 26, 18, 10);
   //////////////////////////////////////
 
-
-
-
-
-// ligne 2 en bas pion 1 a droite //
+  // ligne 2 en bas pion 1 a droite //
   additionR(35, 28, 21, 14);
   additionR(35, 34, 33, 32);
   additionR(35, 27, 19, 11);
   //////////////////////////////////////
 
-
-
-
-
-// ligne 3 en bas pion 1 a gauche //
+  // ligne 3 en bas pion 1 a gauche //
   additionR(22, 15, 8, 1);
   additionR(22, 23, 24, 25);
   additionR(22, 16, 10, 4);
   //////////////////////////////////////
 
-
-
-// ligne 3 en bas pion 2 a droite //
+  // ligne 3 en bas pion 2 a droite //
   additionR(23, 16, 9, 2);
   additionR(23, 24, 25, 26);
   additionR(23, 17, 11, 5);
   //////////////////////////////////////
 
-
-
-// ligne 3 en bas pion 3 a droite //
+  // ligne 3 en bas pion 3 a droite //
   additionR(24, 17, 10, 3);
   additionR(24, 25, 26, 27);
   additionR(24, 18, 12, 6);
   //////////////////////////////////////
 
-
-// ligne 3 en bas pion central //
+  // ligne 3 en bas pion central //
   additionR(25, 18, 11, 4);
   additionR(25, 17, 9, 1);
   additionR(25, 19, 13, 7);
   //////////////////////////////////////
 
-
-
-
-
-
-// ligne 3 en bas pion 3 a droite //
+  // ligne 3 en bas pion 3 a droite //
   additionR(26, 19, 12, 5);
   additionR(26, 25, 24, 23);
   additionR(26, 18, 10, 2);
   //////////////////////////////////////
 
-
-
-// ligne 3 en bas pion 2 a droite //
+  // ligne 3 en bas pion 2 a droite //
   additionR(27, 20, 13, 6);
   additionR(27, 26, 25, 24);
   additionR(27, 19, 11, 3);
   //////////////////////////////////////
 
-
-
-// ligne 3 en bas pion 1 a droite //
+  // ligne 3 en bas pion 1 a droite //
   additionR(28, 21, 14, 7);
   additionR(28, 27, 26, 25);
   additionR(28, 20, 12, 4);
   //////////////////////////////////////
 
-
-
-
-// ligne 3//
+  // ligne 3//
   additionR(15, 16, 17, 18);
   additionR(16, 17, 18, 19);
   additionR(17, 18, 19, 20);
-additionR(21, 20, 19, 18);
+  additionR(21, 20, 19, 18);
   //////////////////////////////////////
 
-
-
-// ligne 2//
+  // ligne 2//
   additionR(8, 9, 10, 11);
   additionR(9, 10, 11, 12);
   additionR(10, 11, 12, 13);
-additionR(14, 13, 12, 11);
+  additionR(14, 13, 12, 11);
   //////////////////////////////////////
 
-
-
-// ligne 1//
+  // ligne 1//
   additionR(1, 2, 3, 4);
   additionR(2, 3, 4, 5);
   additionR(3, 4, 5, 6);
-additionR(7, 6, 5, 4);
+  additionR(7, 6, 5, 4);
   //////////////////////////////////////
-if (winner && winner === "r") {
+  if (winner && winner === "r") {
     alert(`${data[0].joueur2} a gagné !`);
+  }
+
+  function additionN(n1, n2, n3, n4) {
+    if (
+      data &&
+      data[0]["p" + n1] === "n" &&
+      data[0]["p" + n2] === "n" &&
+      data[0]["p" + n3] === "n" &&
+      data[0]["p" + n4] === "n"
+    ) {
+      setTimeout(() => {
+        setWinner("n");
+      }, 1100);
+    }
+  }
+
+  // ligne 1 en bas pion 1 a gauche //
+  additionN(36, 29, 22, 15);
+  additionN(36, 30, 24, 18);
+  additionN(36, 37, 38, 39);
+  //////////////////////////////////////
+
+  // ligne 1 en bas pion 2 a gauche //
+  additionN(37, 30, 23, 16);
+  additionN(37, 31, 25, 19);
+  additionN(37, 38, 39, 40);
+  //////////////////////////////////////
+
+  // ligne 1 en bas pion 3 a gauche //
+  additionN(38, 39, 40, 41);
+  additionN(38, 31, 24, 17);
+  additionN(38, 32, 26, 20);
+  //////////////////////////////////////
+
+  // ligne 1 en bas pion central //
+  additionN(39, 31, 23, 15);
+  additionN(39, 32, 25, 18);
+  additionN(39, 33, 27, 21);
+  //////////////////////////////////////
+
+  // ligne 1 en bas pion 3 à droite //
+  additionN(40, 33, 26, 19);
+  additionN(40, 39, 38, 37);
+  additionN(40, 32, 24, 16);
+  //////////////////////////////////////
+
+  // ligne 1 en bas pion 2 à droite //
+  additionN(41, 34, 27, 20);
+  additionN(41, 40, 39, 38);
+  additionN(41, 33, 25, 17);
+  //////////////////////////////////////
+
+  // ligne 1 en bas pion 42 à droite //
+  additionN(42, 35, 28, 21);
+  additionN(42, 41, 40, 39);
+  additionN(42, 34, 26, 18);
+  //////////////////////////////////////
+
+  // ligne 2 en bas pion 1 a gauche //
+  additionN(29, 22, 15, 8);
+  additionN(29, 23, 17, 11);
+  additionN(29, 30, 31, 32);
+  //////////////////////////////////////
+
+  // ligne 2 en bas pion 2 a gauche //
+  additionN(30, 23, 16, 9);
+  additionN(30, 31, 32, 33);
+  additionN(30, 24, 18, 12);
+  //////////////////////////////////////
+
+  // ligne 2 en bas pion 3 a gauche //
+  additionN(31, 24, 17, 10);
+  additionN(31, 32, 33, 34);
+  additionN(31, 25, 19, 13);
+  //////////////////////////////////////
+
+  // ligne 2 en bas pion central //
+  additionN(32, 25, 18, 11);
+  additionN(32, 24, 16, 8);
+  additionN(32, 26, 20, 14);
+  //////////////////////////////////////
+
+  // ligne 2 en bas pion 3 a droite //
+  additionN(33, 26, 19, 12);
+  additionN(33, 32, 31, 30);
+  additionN(33, 25, 17, 9);
+  //////////////////////////////////////
+
+  // ligne 2 en bas pion 2 a droite //
+  additionN(34, 27, 20, 13);
+  additionN(34, 33, 32, 31);
+  additionN(34, 26, 18, 10);
+  //////////////////////////////////////
+
+  // ligne 2 en bas pion 1 a droite //
+  additionN(35, 28, 21, 14);
+  additionN(35, 34, 33, 32);
+  additionN(35, 27, 19, 11);
+  //////////////////////////////////////
+
+  // ligne 3 en bas pion 1 a gauche //
+  additionN(22, 15, 8, 1);
+  additionN(22, 23, 24, 25);
+  additionN(22, 16, 10, 4);
+  //////////////////////////////////////
+
+  // ligne 3 en bas pion 2 a droite //
+  additionN(23, 16, 9, 2);
+  additionN(23, 24, 25, 26);
+  additionN(23, 17, 11, 5);
+  //////////////////////////////////////
+
+  // ligne 3 en bas pion 3 a droite //
+  additionN(24, 17, 10, 3);
+  additionN(24, 25, 26, 27);
+  additionN(24, 18, 12, 6);
+  //////////////////////////////////////
+
+  // ligne 3 en bas pion central //
+  additionN(25, 18, 11, 4);
+  additionN(25, 17, 9, 1);
+  additionN(25, 19, 13, 7);
+  //////////////////////////////////////
+
+  // ligne 3 en bas pion 3 a droite //
+  additionN(26, 19, 12, 5);
+  additionN(26, 25, 24, 23);
+  additionN(26, 18, 10, 2);
+  //////////////////////////////////////
+
+  // ligne 3 en bas pion 2 a droite //
+  additionN(27, 20, 13, 6);
+  additionN(27, 26, 25, 24);
+  additionN(27, 19, 11, 3);
+  //////////////////////////////////////
+
+  // ligne 3 en bas pion 1 a droite //
+  additionN(28, 21, 14, 7);
+  additionN(28, 27, 26, 25);
+  additionN(28, 20, 12, 4);
+  //////////////////////////////////////
+
+  // ligne 3//
+  additionN(15, 16, 17, 18);
+  additionN(16, 17, 18, 19);
+  additionN(17, 18, 19, 20);
+  additionN(21, 20, 19, 18);
+  //////////////////////////////////////
+
+  // ligne 2//
+  additionN(8, 9, 10, 11);
+  additionN(9, 10, 11, 12);
+  additionN(10, 11, 12, 13);
+  additionN(14, 13, 12, 11);
+  //////////////////////////////////////
+
+  // ligne 1//
+  additionN(1, 2, 3, 4);
+  additionN(2, 3, 4, 5);
+  additionN(3, 4, 5, 6);
+  additionN(7, 6, 5, 4);
+  //////////////////////////////////////
+  if (winner && winner === "n") {
+    alert(`${data[0].joueur1} a gagné !`);
   }
 
   return (
