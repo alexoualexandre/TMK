@@ -478,9 +478,9 @@ function Puissance() {
   additionR(3, 4, 5, 6);
   additionR(7, 6, 5, 4);
   //////////////////////////////////////
-  if (winner && winner === "r") {
-    alert(`${data[0].joueur2} a gagné !`);
-  }
+  // if (winner && winner === "r") {
+  //   alert(`${data[0].joueur2} a gagné !`);
+  // }
 
   function additionN(n1, n2, n3, n4) {
     if (
@@ -642,12 +642,22 @@ function Puissance() {
   additionN(3, 4, 5, 6);
   additionN(7, 6, 5, 4);
   //////////////////////////////////////
-  if (winner && winner === "n") {
-    alert(`${data[0].joueur1} a gagné !`);
-  }
+  // if (winner && winner === "n") {
+  //   alert(`${data[0].joueur1} a gagné !`);
+  // }
 
   return (
     <div className="div-puissance" ref={divPuissance}>
+      {winner && winner === "r" && (
+        <div className="winner">
+          <p className="name-win">{data[0].joueur2}</p>
+        </div>
+      )}
+      {winner && winner === "n" && (
+        <div className="winner">
+          <p className="name-win">{data[0].joueur1}</p>
+        </div>
+      )}
       <img src="P4.png" className="img-puissance4" />
 
       {!params.get("id") &&
