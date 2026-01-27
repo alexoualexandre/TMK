@@ -103,7 +103,7 @@ function Puissance() {
           .then((resp) => {
             setData(resp);
           });
-      }, 500);
+      }, 675);
       return () => clearInterval(interval);
     }
     bdd();
