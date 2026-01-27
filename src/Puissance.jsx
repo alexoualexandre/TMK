@@ -328,6 +328,7 @@ function Puissance() {
     ) {
       setTimeout(() => {
         setWinner("r");
+        divPuissance.current.style.backgroundImage = "url('')";
       }, 1100);
     }
   }
@@ -492,6 +493,7 @@ function Puissance() {
     ) {
       setTimeout(() => {
         setWinner("n");
+        divPuissance.current.style.backgroundImage = "url('')";
       }, 1100);
     }
   }

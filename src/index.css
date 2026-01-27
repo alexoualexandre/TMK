@@ -513,7 +513,7 @@ input[type="radio"] {
   text-align: right;
   font-size: 30px;
   font-family: "Ribeye", serif;
-  opacity: 0.95;
+  /* opacity: 0.95; */
 }
 
 .name-win {
