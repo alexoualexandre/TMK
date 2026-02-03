@@ -51,4 +51,4 @@ app.get("/get-data/:id", getData);
 
 app.put("/update-position", updatePosition);
 
-app.put("/scorej1",updateScoreJ1);
+app.put("/scorej1", updateScoreJ1);

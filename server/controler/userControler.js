@@ -52,7 +52,6 @@ const updatePosition = async (req, res, next) => {
   }
 };
 
-
 const updateScoreJ1 = async (req, res, next) => {
   const { score, id } = req.body;
   try {
@@ -61,7 +60,7 @@ const updateScoreJ1 = async (req, res, next) => {
   } catch (err) {
     next({ error: `erreur:${err}` });
   }
-
+};
 
 module.exports = {
   getUser,

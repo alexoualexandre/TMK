@@ -326,51 +326,26 @@ function Puissance() {
       data[0]["p" + n3] === "r" &&
       data[0]["p" + n4] === "r"
     ) {
+      // fetch(
+      //   `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej1`,
+
+      //   {
+      //     method: "PUT",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     body: JSON.stringify({
+      //       score: data && parseInt(data[0].scorej1 + 1, 10),
+      //       id: localStorage.getItem("session"),
+      //     }),
+      //   },
+      // ).then((response) => response.json());
       setTimeout(() => {
         setWinner("r");
         divPuissance.current.style.backgroundImage = "url('')";
-
-
-
-
-
-
-
-
-
-
- fetch(
-      `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej1`,
-
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          score: data && parseInt(data[0].scorej1 + 1,10),
-          id: localStorage.getItem("session"),
-
-        }),
-      },
-    ).then((response) => response.json());
-
-
-
-
-
-
-
-
-
-
-
-
-
       }, 1100);
     }
   }
-
   // ligne 1 en bas pion 1 a gauche //
   additionR(36, 29, 22, 15);
   additionR(36, 30, 24, 18);
@@ -690,18 +665,27 @@ function Puissance() {
     <div className="div-puissance" ref={divPuissance}>
       {winner && winner === "r" && (
         <div className="winner">
-<div className="choice">
+          <div className="choice">
+            <button type="boutton" className="continu">
+              continuer
+            </button>
+            <button type="boutton" className="continu">
+              terminer
+            </button>
+          </div>
           <p className="name-win">{data[0].joueur2}</p>
-</div>
-
-<button type="boutton" className="continu">continuer</button>
-
-
-
         </div>
       )}
       {winner && winner === "n" && (
         <div className="winner">
+          <div className="choice">
+            <button type="boutton" className="continu">
+              continuer
+            </button>
+            <button type="boutton" className="continu">
+              terminer
+            </button>
+          </div>
           <p className="name-win">{data[0].joueur1}</p>
         </div>
       )}

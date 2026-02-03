@@ -6,7 +6,7 @@ class User {
   async getUser(name) {
     const [users] = await connection.query(
       "SELECT * FROM users WHERE joueur1 = ?",
-      [name]
+      [name],
     );
     return users;
   }
@@ -14,7 +14,7 @@ class User {
   async addUser(us) {
     const [user] = await connection.query(
       "INSERT INTO users (joueur1,joueur2) VALUES (?,?)",
-      [us, ""]
+      [us, ""],
     );
     return user.insertId;
   }
@@ -30,7 +30,7 @@ class User {
   async getData(id) {
     const [getData] = await connection.query(
       "SELECT * FROM users WHERE id = ?",
-      [id]
+      [id],
     );
     return getData;
   }
@@ -48,35 +48,12 @@ class User {
     await connection.query(request, [p, id]);
   }
 
-
-
-
-
-
-
-
-
-
-
   async updateScoreJ1(score, id) {
     await connection.query("UPDATE users SET scoreJ1 = ? WHERE id = ?", [
-     parseInt(score,10),
-     parseInt(id,10),
+      parseInt(score, 10),
+      parseInt(id, 10),
     ]);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 module.exports = { User };
