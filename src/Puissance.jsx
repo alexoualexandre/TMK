@@ -329,6 +329,44 @@ function Puissance() {
       setTimeout(() => {
         setWinner("r");
         divPuissance.current.style.backgroundImage = "url('')";
+
+
+
+
+
+
+
+
+
+
+ fetch(
+      `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej1`,
+
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          score: data && parseInt(data[0].scorej1 + 1,10),
+          id: localStorage.getItem("session"),
+
+        }),
+      },
+    ).then((response) => response.json());
+
+
+
+
+
+
+
+
+
+
+
+
+
       }, 1100);
     }
   }
@@ -652,7 +690,14 @@ function Puissance() {
     <div className="div-puissance" ref={divPuissance}>
       {winner && winner === "r" && (
         <div className="winner">
+<div className="choice">
           <p className="name-win">{data[0].joueur2}</p>
+</div>
+
+<button type="boutton" className="continu">continuer</button>
+
+
+
         </div>
       )}
       {winner && winner === "n" && (

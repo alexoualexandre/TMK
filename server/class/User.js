@@ -47,6 +47,36 @@ class User {
     await connection.query("UPDATE users SET next = ? WHERE id = ?", [nex, id]);
     await connection.query(request, [p, id]);
   }
+
+
+
+
+
+
+
+
+
+
+
+  async updateScoreJ1(score, id) {
+    await connection.query("UPDATE users SET scoreJ1 = ? WHERE id = ?", [
+     parseInt(score,10),
+     parseInt(id,10),
+    ]);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 module.exports = { User };

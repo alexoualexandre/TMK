@@ -52,10 +52,22 @@ const updatePosition = async (req, res, next) => {
   }
 };
 
+
+const updateScoreJ1 = async (req, res, next) => {
+  const { score, id } = req.body;
+  try {
+    await new User().updateScoreJ1(score, id);
+    res.json({ update: "ok" });
+  } catch (err) {
+    next({ error: `erreur:${err}` });
+  }
+
+
 module.exports = {
   getUser,
   addUser,
   updateInvitation,
   getData,
   updatePosition,
+  updateScoreJ1,
 };

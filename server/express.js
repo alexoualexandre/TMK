@@ -14,6 +14,7 @@ const {
   updateInvitation,
   getData,
   updatePosition,
+  updateScoreJ1,
 } = require("./controler/userControler.js");
 
 app.use(express.json());
@@ -49,3 +50,5 @@ app.put("/update-invitation", updateInvitation);
 app.get("/get-data/:id", getData);
 
 app.put("/update-position", updatePosition);
+
+app.put("/scorej1",updateScoreJ1);
