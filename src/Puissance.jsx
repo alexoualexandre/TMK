@@ -44,6 +44,7 @@ function Puissance() {
                 setInviter(res.number);
                 localStorage.setItem("session", res.number);
                 localStorage.setItem("next", 1);
+                localStorage.setItem("name", name);
               });
           }
         } else {
@@ -65,6 +66,7 @@ function Puissance() {
             .then((res) => {
               localStorage.setItem("session", res.invite);
               localStorage.setItem("next", 2);
+              localStorage.setItem("name", name);
             });
         }
       });
@@ -478,9 +480,6 @@ function Puissance() {
   additionR(3, 4, 5, 6);
   additionR(7, 6, 5, 4);
   //////////////////////////////////////
-  // if (winner && winner === "r") {
-  //   alert(`${data[0].joueur2} a gagné !`);
-  // }
 
   function additionN(n1, n2, n3, n4) {
     if (
@@ -643,46 +642,55 @@ function Puissance() {
   additionN(3, 4, 5, 6);
   additionN(7, 6, 5, 4);
   //////////////////////////////////////
-  // if (winner && winner === "n") {
-  //   alert(`${data[0].joueur1} a gagné !`);
-  // }
-const addScore = ()=>{
-if(winner === "r"){
 
-     fetch(
-         `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej1`,
+  const addScore = () => {
+    if (winner === "r" && localStorage.getItem("name") === data[0].joueur2) {
+      fetch(
+        `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej2`,
 
-         {
-           method: "PUT",
-           headers: {
-             "Content-Type": "application/json",
-           },
-           body: JSON.stringify({
-             score: data && parseInt(data[0].scorej1 + 1, 10),
-             id: localStorage.getItem("session"),
-           }),
-         },
-       ).then((response) => response.json());
-setWinner(false);
-divPuissance.current.style.backgroundImage = "url('/public/s-l1200.jpg')";
-}
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            score: data && parseInt(data[0].scorej2 + 1, 10),
+            id: localStorage.getItem("session"),
+          }),
+        },
+      ).then((response) => response.json());
+    }
+    divPuissance.current.style.backgroundImage = "url('/public/s-l1200.jpg')";
+    setWinner(false);
+  };
 
+  const addScore2 = () => {
+    if (winner === "n" && localStorage.getItem("name") === data[0].joueur1) {
+      fetch(
+        `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej1`,
 
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            score: data && parseInt(data[0].scorej1 + 1, 10),
+            id: localStorage.getItem("session"),
+          }),
+        },
+      ).then((response) => response.json());
+    }
+    divPuissance.current.style.backgroundImage = "url('/public/s-l1200.jpg')";
+    setWinner(false);
+  };
 
-
-
-
-
-
-}
   return (
     <div className="div-puissance" ref={divPuissance}>
       {winner && winner === "r" && (
         <div className="winner">
           <div className="choice">
-            <button type="boutton" className="continu"
-onClick={addScore}
->
+            <button type="boutton" className="continu" onClick={addScore}>
               continuer
             </button>
             <button type="boutton" className="continu">
@@ -695,7 +703,7 @@ onClick={addScore}
       {winner && winner === "n" && (
         <div className="winner">
           <div className="choice">
-            <button type="boutton" className="continu">
+            <button type="boutton" className="continu" onClick={addScore2}>
               continuer
             </button>
             <button type="boutton" className="continu">
@@ -745,14 +753,14 @@ onClick={addScore}
           {data && data[0].joueur1}
           <br />
           <span className="span-les-noms">
-            {data && data[0].joueur1 ? "0" : ""}
+            {data && data[0].joueur1 ? data[0].scorej1 : ""}
           </span>
         </h4>{" "}
         <h4 className="h4-les-noms">
           {data && data[0].joueur2}
           <br />
           <span className="span-les-noms">
-            {data && data[0].joueur2 ? "0" : ""}
+            {data && data[0].joueur2 ? data[0].scorej2 : ""}
           </span>
         </h4>
       </div>

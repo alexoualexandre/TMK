@@ -49,17 +49,35 @@ class User {
   }
 
   async updateScoreJ1(score, id) {
-    await connection.query("UPDATE users SET scoreJ1 = ? WHERE id = ?", [
+    await connection.query("UPDATE users SET scorej1 = ? WHERE id = ?", [
       parseInt(score, 10),
       parseInt(id, 10),
     ]);
 
-   
-await connection.query("UPDATE users SET p1 = '',p2 = '',p3 = '',p4 = '',p5 = '',p6 = '',p7 = '',p8 = '',p9 = '',p10 = '',p11 = '',p12 = '',p13 = '',p14 = '',p15 = '',p16 = '',p17 = '',p18 = '',p19 = '',p20 = '',p21 = '',p22 = '',p23 = '',p24 = '',p25 = '',p26 = '',p27 = '',p28 = '',p29 = '',p30 = '',p31 = '',p32 = '',p33 = '',p34 = '',p35 = '',p36 = '',p37 = '',p38 = '',p39 = '',p40 = '',p41 = '',p42 = '' WHERE id = ?",[id]);
+    await connection.query("UPDATE users SET compteur = 1 WHERE id = ?", [
+      parseInt(id, 10),
+    ]);
 
+    await connection.query(
+      "UPDATE users SET p1 = '',p2 = '',p3 = '',p4 = '',p5 = '',p6 = '',p7 = '',p8 = '',p9 = '',p10 = '',p11 = '',p12 = '',p13 = '',p14 = '',p15 = '',p16 = '',p17 = '',p18 = '',p19 = '',p20 = '',p21 = '',p22 = '',p23 = '',p24 = '',p25 = '',p26 = '',p27 = '',p28 = '',p29 = '',p30 = '',p31 = '',p32 = '',p33 = '',p34 = '',p35 = '',p36 = '',p37 = '',p38 = '',p39 = '',p40 = '',p41 = '',p42 = '' WHERE id = ?",
+      [id],
+    );
+  }
 
+  async updateScoreJ2(score, id) {
+    await connection.query("UPDATE users SET scorej2 = ? WHERE id = ?", [
+      parseInt(score, 10),
+      parseInt(id, 10),
+    ]);
 
+    await connection.query("UPDATE users SET compteur = 1 WHERE id = ?", [
+      parseInt(id, 10),
+    ]);
 
+    await connection.query(
+      "UPDATE users SET p1 = '',p2 = '',p3 = '',p4 = '',p5 = '',p6 = '',p7 = '',p8 = '',p9 = '',p10 = '',p11 = '',p12 = '',p13 = '',p14 = '',p15 = '',p16 = '',p17 = '',p18 = '',p19 = '',p20 = '',p21 = '',p22 = '',p23 = '',p24 = '',p25 = '',p26 = '',p27 = '',p28 = '',p29 = '',p30 = '',p31 = '',p32 = '',p33 = '',p34 = '',p35 = '',p36 = '',p37 = '',p38 = '',p39 = '',p40 = '',p41 = '',p42 = '' WHERE id = ?",
+      [id],
+    );
   }
 }
 

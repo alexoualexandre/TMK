@@ -62,6 +62,16 @@ const updateScoreJ1 = async (req, res, next) => {
   }
 };
 
+const updateScoreJ2 = async (req, res, next) => {
+  const { score, id } = req.body;
+  try {
+    await new User().updateScoreJ2(score, id);
+    res.json({ update: "ok" });
+  } catch (err) {
+    next({ error: `erreur:${err}` });
+  }
+};
+
 module.exports = {
   getUser,
   addUser,
@@ -69,4 +79,5 @@ module.exports = {
   getData,
   updatePosition,
   updateScoreJ1,
+  updateScoreJ2,
 };
