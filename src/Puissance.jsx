@@ -326,20 +326,6 @@ function Puissance() {
       data[0]["p" + n3] === "r" &&
       data[0]["p" + n4] === "r"
     ) {
-      // fetch(
-      //   `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej1`,
-
-      //   {
-      //     method: "PUT",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({
-      //       score: data && parseInt(data[0].scorej1 + 1, 10),
-      //       id: localStorage.getItem("session"),
-      //     }),
-      //   },
-      // ).then((response) => response.json());
       setTimeout(() => {
         setWinner("r");
         divPuissance.current.style.backgroundImage = "url('')";
@@ -660,13 +646,43 @@ function Puissance() {
   // if (winner && winner === "n") {
   //   alert(`${data[0].joueur1} a gagné !`);
   // }
+const addScore = ()=>{
+if(winner === "r"){
 
+     fetch(
+         `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej1`,
+
+         {
+           method: "PUT",
+           headers: {
+             "Content-Type": "application/json",
+           },
+           body: JSON.stringify({
+             score: data && parseInt(data[0].scorej1 + 1, 10),
+             id: localStorage.getItem("session"),
+           }),
+         },
+       ).then((response) => response.json());
+setWinner(false);
+divPuissance.current.style.backgroundImage = "url('/public/s-l1200.jpg')";
+}
+
+
+
+
+
+
+
+
+}
   return (
     <div className="div-puissance" ref={divPuissance}>
       {winner && winner === "r" && (
         <div className="winner">
           <div className="choice">
-            <button type="boutton" className="continu">
+            <button type="boutton" className="continu"
+onClick={addScore}
+>
               continuer
             </button>
             <button type="boutton" className="continu">
