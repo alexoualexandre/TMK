@@ -321,7 +321,7 @@ function Puissance() {
   }, [data]);
 
   function additionR(n1, n2, n3, n4) {
-    if (
+   if (
       data &&
       data[0]["p" + n1] === "r" &&
       data[0]["p" + n2] === "r" &&
@@ -334,7 +334,8 @@ function Puissance() {
       }, 1100);
     }
   }
-  // ligne 1 en bas pion 1 a gauche //
+ 
+ // ligne 1 en bas pion 1 a gauche //
   additionR(36, 29, 22, 15);
   additionR(36, 30, 24, 18);
   additionR(36, 37, 38, 39);
@@ -482,7 +483,7 @@ function Puissance() {
   //////////////////////////////////////
 
   function additionN(n1, n2, n3, n4) {
-    if (
+   if (
       data &&
       data[0]["p" + n1] === "n" &&
       data[0]["p" + n2] === "n" &&
@@ -495,7 +496,6 @@ function Puissance() {
       }, 1100);
     }
   }
-
   // ligne 1 en bas pion 1 a gauche //
   additionN(36, 29, 22, 15);
   additionN(36, 30, 24, 18);
@@ -644,7 +644,13 @@ function Puissance() {
   //////////////////////////////////////
 
   const addScore = () => {
-    if (winner === "r" && localStorage.getItem("name") === data[0].joueur2) {
+    
+    divPuissance.current.style.backgroundImage = 'url("/public/s-l1200.jpg")';
+    setWinner(false);
+
+
+
+if (winner === "r" && localStorage.getItem("name") === data[0].joueur2) {
       fetch(
         `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej2`,
 
@@ -660,12 +666,20 @@ function Puissance() {
         },
       ).then((response) => response.json());
     }
-    divPuissance.current.style.backgroundImage = "url('/public/s-l1200.jpg')";
-    setWinner(false);
+    
   };
 
   const addScore2 = () => {
-    if (winner === "n" && localStorage.getItem("name") === data[0].joueur1) {
+   
+
+
+    divPuissance.current.style.backgroundImage = 'url("/public/s-l1200.jpg")';
+    setWinner(false);
+
+
+
+
+ if (winner === "n" && localStorage.getItem("name") === data[0].joueur1) {
       fetch(
         `${VITE_API_HTTP}://${VITE_API_URL}:${VITE_API_SERVER_PORT}/scorej1`,
 
@@ -681,8 +695,7 @@ function Puissance() {
         },
       ).then((response) => response.json());
     }
-    divPuissance.current.style.backgroundImage = "url('/public/s-l1200.jpg')";
-    setWinner(false);
+   
   };
 
   return (
